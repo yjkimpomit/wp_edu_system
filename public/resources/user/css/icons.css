@@ -1,0 +1,65 @@
+/* Mask icons: color follows currentColor and can be overridden with --icon-color. */
+[data-icon]::before,
+:is(
+	.icon-close,
+	.icon-timer,
+	.icon-hourglass,
+	.icon-search,
+	.icon-edit,
+	.icon-upload,
+	.icon-stacks,
+	.icon-download,
+	.icon-return,
+	.icon-settings,
+	.icon-description,
+	.icon-connect,
+	.icon-folder-data,
+	.icon-3d,
+	.icon-pano,
+	.icon-tm,
+	.icon-delete,
+	.icon-alert,
+	.icon-attach,
+	.icon-popup
+) {
+	display: inline-block;
+	flex: 0 0 var(--icon-size, var(--icon-size-lg));
+	width: var(--icon-size, var(--icon-size-lg));
+	height: var(--icon-size, var(--icon-size-lg));
+	background-color: var(--icon-color, currentColor);
+	-webkit-mask: var(--icon-source) center / contain no-repeat;
+	mask: var(--icon-source) center / contain no-repeat;
+}
+
+.icon-close {
+	--icon-source: url('/resources/user/images/icons/close.svg');
+}
+[data-icon]::before {
+	content: "";
+}
+
+.icon-search, [data-icon="search"]::before {
+	--icon-source: url('/resources/user/images/icons/search.svg');
+}
+
+.icon-timer, [data-icon="timer"]::before {
+	--icon-source: url('/resources/user/images/icons/timer.svg');
+}
+
+.icon-timer, [data-icon="lock"]::before {
+	--icon-source: url('/resources/user/images/icons/lock.svg');
+}
+
+.icon-hourglass, [data-icon="hourglass"]::before {
+	--icon-source: url('/resources/user/images/icons/hourglass.svg');
+}
+
+
+
+[data-icon="calendar"]::before {
+	--icon-source: url('/resources/user/images/icons/calendar.svg');
+}
+
+[data-icon="keyboard-down"]::before {
+	--icon-source: url('/resources/user/images/icons/keyboard_down.svg');
+}

@@ -1,0 +1,303 @@
+/*
+ * variables.css
+ * Source: on Light.tokens(1).json
+ * Scope: primitive + semantic (Light mode)
+ * Generated from Figma Variables export.
+ */
+@import url('/resources/user/fonts/NotoSansKR/NotoSansKR.css');
+
+:root {
+
+	--font-family-base: "Noto Sans KR";
+	
+		/* semantic/font-size */
+	--fs-sm: 14px;
+	--fs-md: 16px;
+	--fs-lg: 20px;
+	--fs-xl: 24px;
+	/* semantic/font-weight */
+	--fw-regular: 400;
+	--fw-medium: 500;
+	--fw-bold: 700;
+		/* semantic/icon-size */
+	--icon-size-sm: 16px;
+	--icon-size-md: 20px;
+	--icon-size-lg: 24px;
+	/* size/space */
+	--space-100: 8px;
+	--space-150: 12px;
+	--space-200: 16px;
+	--space-250: 20px;
+	--space-300: 24px;
+	--space-400: 32px;
+	--space-450: 36px;
+	--space-500: 40px;
+	--space-600: 48px;
+	--space-700: 56px;
+	--space-800: 64px;
+	--space-000: 0px;
+	--space-025: 2px;
+	--space-050: 4px;
+	
+	/* size/height */
+	--height-24: 24px;
+	--height-28: 28px;
+	--height-32: 32px;
+	--height-36: 36px;
+	--height-40: 40px;
+	--height-48: 48px;
+
+	/* size/opacity */
+	--opacity-0: 0%;
+	--opacity-16: 16%;
+	--opacity-24: 24%;
+	--opacity-32: 32%;
+	--opacity-60: 60%;
+	--opacity-90: 90%;
+	--opacity-100: 100%;
+	--opacity-disabled: var(--opacity-60);
+
+	/* size/radius */
+	--radius-xs: var(--space-050);
+	--radius-sm: var(--space-100);
+	--radius-md: var(--space-150);
+	--radius-lg: var(--space-300);
+	--radius-full: 999px;
+
+	/* size/badge */
+	--badge-min-width: 56px;
+
+	/* PRIMITIVE */
+
+	/* primitive/white */
+	--white: #FFFFFF;
+
+	/* primitive/black */
+	--black: #080A0D;
+
+	/* primitive/blue */
+	--blue-100: #F2F7FC;
+	--blue-200: #E6F0FA;
+	--blue-300: #CCE0F4;
+	--blue-400: #99C2E8;
+	--blue-500: #0083E0;
+	--blue-600: #0075C9;
+	--blue-700: #0060A9;
+	--blue-800: #00529B;
+	--blue-900: #00427C;
+
+	/* primitive/neutral */
+	--neutral-100: #F9FAFB;
+	--neutral-200: #F2F4F8;
+	--neutral-300: #DDE4ED;
+	--neutral-400: #CCD5E0;
+	--neutral-500: #95A1B2;
+	--neutral-600: #67778E;
+	--neutral-700: #454F5F;
+	--neutral-800: #313B49;
+	--neutral-900: #212731;
+
+	/* primitive/green */
+	--green-100: #EBFFF5;
+	--green-200: #CDFBE4;
+	--green-300: #A4F6CD;
+	--green-400: #60E5A7;
+	--green-500: #17C272;
+	--green-600: #00A966;
+	--green-700: #098652;
+	--green-800: #116A43;
+	--green-900: #145239;
+
+	/* primitive/red */
+	--red-100: #FFF1F4;
+	--red-200: #FFE4E9;
+	--red-300: #FFD0D4;
+	--red-400: #FFADB4;
+	--red-500: #FF5C5C;
+	--red-600: #F51414;
+	--red-700: #CC0000;
+	--red-800: #A30000;
+	--red-900: #7A0000;
+
+	/* primitive/yellow */
+	--yellow-100: #FFFAE6;
+	--yellow-200: #FEF4CB;
+	--yellow-300: #FAE48C;
+	--yellow-400: #F5D745;
+	--yellow-500: #FBBF24;
+	--yellow-600: #F59E0B;
+	--yellow-700: #EB7E00;
+	--yellow-800: #BE5404;
+	--yellow-900: #732B07;
+
+	/* primitive/sky */
+	--sky-100: #EBFBFF;
+	--sky-200: #D6F6FF;
+	--sky-300: #AAE8FA;
+	--sky-400: #72DBF9;
+	--sky-500: #05BBF0;
+	--sky-600: #009ECC;
+	--sky-700: #067EA1;
+	--sky-800: #096079;
+	--sky-900: #084B5E;
+
+	/* primitive/purple */
+	--purple-100: #F5F3FF;
+	--purple-200: #EDE9FE;
+	--purple-300: #DDD6FE;
+	--purple-400: #C4B5FD;
+	--purple-500: #A587FD;
+	--purple-600: #8752FF;
+	--purple-700: #712CE8;
+	--purple-800: #5F22BF;
+	--purple-900: #4D1A9E;
+
+	/* SEMANTIC */
+
+	/* semantic/data-viz */
+	--data-viz-10-soft: #94A3B8;
+	--data-viz-10-default: #475569;
+	--data-viz-01-soft: #75B1FB;
+	--data-viz-01-default: #2563EB;
+	--data-viz-02-soft: #67D3E7;
+	--data-viz-02-default: #0891B2;
+	--data-viz-03-soft: #F5A666;
+	--data-viz-03-default: #EA580C;
+	--data-viz-04-soft: #C084FC;
+	--data-viz-04-default: #9333EA;
+	--data-viz-05-soft: #F87171;
+	--data-viz-05-default: #DC2626;
+	--data-viz-06-soft: #22D398;
+	--data-viz-06-default: #099063;
+	--data-viz-07-soft: #BFE03E;
+	--data-viz-07-default: #84A316;
+	--data-viz-08-soft: #EA8055;
+	--data-viz-08-default: #C2410C;
+	--data-viz-09-soft: #A5B4FC;
+	--data-viz-09-default: #6366F1;
+
+	/* semantic/bg */
+	--bg-selected: var(--sky-200);
+	--bg-white: var(--white);
+	--bg-primary-subtlest: var(--blue-100);
+	--bg-primary-subtler: var(--blue-200);
+	--bg-primary-subtle: var(--blue-300);
+	--bg-primary-default: var(--blue-500);
+	--bg-primary-strong-alpha-16: color-mix(in srgb, var(--blue-600) 16%, transparent);
+	--bg-primary-strong: var(--blue-600);
+	--bg-primary-stronger: var(--blue-700);
+	--bg-primary-strongest: var(--blue-800);
+	--bg-primary-emphasis: var(--blue-900);
+	--bg-neutral-subtlest: var(--neutral-100);
+	--bg-neutral-subtler: var(--neutral-200);
+	--bg-neutral-strong: var(--neutral-600);
+	--bg-success-subtlest: var(--green-100);
+	--bg-success-subtler: var(--green-200);
+	--bg-success-strong: var(--green-600);
+	--bg-success-stronger: var(--green-700);
+	--bg-success-strongest: var(--green-800);
+	--bg-danger-subtlest: var(--red-100);
+	--bg-danger-subtler: var(--red-200);
+	--bg-danger-strong: var(--red-600);
+	--bg-danger-stronger: var(--red-700);
+	--bg-danger-strongest: var(--red-800);
+	--bg-warning-subtlest: var(--yellow-100);
+	--bg-warning-subtler: var(--yellow-200);
+	--bg-warning-strong: var(--yellow-600);
+	--bg-warning-stronger: var(--yellow-700);
+	--bg-warning-strongest: var(--yellow-800);
+	--bg-info-subtlest: var(--sky-100);
+	--bg-info-subtler: var(--sky-200);
+	--bg-info-strong: var(--sky-600);
+	--bg-info-stronger: var(--sky-700);
+	--bg-info-strongest: var(--sky-800);
+	--bg-accent-purple-subtlest: var(--purple-100);
+	--bg-accent-purple-subtler: var(--purple-200);
+	--bg-accent-purple-strong: var(--purple-600);
+	--bg-accent-purple-stronger: var(--purple-700);
+
+	/* semantic/border */
+	--border-white: var(--white);
+	--border-primary-subtlest: var(--blue-200);
+	--border-primary-subtler: var(--blue-300);
+	--border-primary-subtle: var(--blue-400);
+	--border-primary-soft: var(--blue-500);
+	--border-primary-default: var(--blue-600);
+	--border-primary-strong: var(--blue-700);
+	--border-primary-stronger: var(--blue-800);
+	--border-primary-strongest: var(--blue-900);
+	--border-neutral-subtler: var(--neutral-300);
+	--border-neutral-subtle: var(--neutral-400);
+	--border-success-subtler: var(--green-300);
+	--border-success-stronger: var(--green-800);
+	--border-danger-subtler: var(--red-300);
+	--border-danger-stronger: var(--red-800);
+	--border-warning-subtler: var(--yellow-300);
+	--border-warning-stronger: var(--yellow-800);
+	--border-info-subtler: var(--sky-300);
+	--border-info-stronger: var(--sky-800);
+	--border-accent-purple-subtler: var(--purple-300);
+	--border-accent-purple-stronger: var(--purple-800);
+
+	/* semantic/fg */
+	--fg-white: var(--white);
+	--fg-primary-subtler: var(--blue-300);
+	--fg-primary-strong: var(--blue-700);
+	--fg-primary-stronger: var(--blue-800);
+	--fg-neutral-subtle: var(--neutral-400);
+	--fg-neutral-strong: var(--neutral-700);
+	--fg-neutral-stronger: var(--neutral-800);
+	--fg-success-strong: var(--green-700);
+	--fg-success-stronger: var(--green-800);
+	--fg-danger-strong: var(--red-700);
+	--fg-danger-stronger: var(--red-800);
+	--fg-warning-strong: var(--yellow-700);
+	--fg-warning-stronger: var(--yellow-800);
+	--fg-info-strong: var(--sky-700);
+	--fg-info-stronger: var(--sky-800);
+	--fg-accent-purple-strong: var(--purple-700);
+	--fg-accent-purple-stronger: var(--purple-800);
+	--fg-result-pass-default: var(--green-600);
+	--fg-result-pass-strong: var(--green-700);
+	--fg-result-fail-default: var(--red-600);
+	--fg-result-fail-strong: var(--red-700);
+
+	/* semantic/opacity */
+	--opacity-light-16: color-mix(in srgb, var(--white) 16%, transparent);
+	--opacity-light-24: color-mix(in srgb, var(--white) 24%, transparent);
+	--opacity-light-32: color-mix(in srgb, var(--white) 32%, transparent);
+	--opacity-light-00: color-mix(in srgb, var(--white) 0%, transparent);
+	--opacity-dark-16: color-mix(in srgb, var(--black) 16%, transparent);
+	--opacity-dark-32: color-mix(in srgb, var(--black) 32%, transparent);
+	--opacity-dark-00: color-mix(in srgb, var(--black) 0%, transparent);
+
+	/* Gradient */
+	--chart-01: linear-gradient(180deg, var(--data-viz-01-soft), var(--data-viz-01-default));
+	--chart-02: linear-gradient(180deg, var(--data-viz-02-soft), var(--data-viz-02-default));
+	--chart-03: linear-gradient(180deg, var(--data-viz-03-soft), var(--data-viz-03-default));
+	--chart-04: linear-gradient(180deg, var(--data-viz-04-soft), var(--data-viz-04-default));
+	--chart-05: linear-gradient(180deg, var(--data-viz-05-soft), var(--data-viz-05-default));
+	--chart-06: linear-gradient(180deg, var(--data-viz-06-soft), var(--data-viz-06-default));
+	--chart-07: linear-gradient(180deg, var(--data-viz-07-soft), var(--data-viz-07-default));
+	--chart-08: linear-gradient(180deg, var(--data-viz-08-soft), var(--data-viz-08-default));
+	--chart-09: linear-gradient(180deg, var(--data-viz-09-soft), var(--data-viz-09-default));
+	--chart-10: linear-gradient(180deg, var(--data-viz-10-soft), var(--data-viz-10-default));
+
+	--chart-light: linear-gradient(180deg, var(--neutral-200), var(--neutral-300));
+	--chart-dark: linear-gradient(180deg, var(--neutral-700), var(--neutral-800));
+
+	/* semantic/sidenav */
+	--gradient-radial-navy: radial-gradient(ellipse at 50% 50%, rgb(0 166 214 / 28%) 10%, rgb(0 166 214 / 0%) 100%);
+	--gradient-linear-navy: linear-gradient(180deg, #00345A 0%, #101522 100%);
+	--bg-dual-gradient: var(--gradient-radial-navy), var(--gradient-linear-navy);
+
+	/* semantic/box-shadow */
+	--box-shadow-1: 0 0 2px 1px var(--opacity-dark-16);
+	--box-shadow-2: 0 0 16px 4px var(--opacity-dark-32);
+
+	/* component/form */
+	--date-range-width: calc(var(--space-800) * 5);
+}
+
+
+
