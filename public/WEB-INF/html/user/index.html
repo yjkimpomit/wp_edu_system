@@ -6,99 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>서부발전 | 기동정지절차교육평가시스템</title>
 	<link rel="stylesheet" href="/resources/user/css/user.css">
-
-	<!-- <link rel="stylesheet" href="/resources/user/js/fileupload/dropzone-5.9.3.min.css">
-	<link rel="stylesheet" href="/resources/user/js/fileupload/dropzone.override.css">
-	
-	<script src="/resources/user/js/common/admin.js" defer></script>
-	<script src="/resources/user/js/fileupload/dropzone-5.9.3.min.js"></script>
-	<script src="/resources/user/js/file/custom-file.js"></script> -->
 </head>
 
 <body>
-	<div class="user-shell">
-		<header>
-			<strong>서부발전</strong>
-			<span aria-hidden="true">|</span>
-			<span>기동정지절차교육평가시스템</span>
-		</header>
-		<main>
-			<aside aria-label="관리 메뉴">
-				<div>
-					<section class="equipment-search" role="search" aria-label="관리 메뉴 탐색">
-						<div class="equipment-search__controls">
-							<label class="visually-hidden" for="facSelect">검색옵션 선택</label>
-							<select class="form-select equipment-search__type" id="facSelect">
-								<option value="1">설비</option>
-								<option value="2">부품</option>
-							</select>
-							<label for="facSearchInput" class="visually-hidden">설비명 입력</label>
-							<input type="search" class="form-control" id="facSearchInput" placeholder="설비 번호, 명 입력">
-							<button type="button" class="equipment-search__expand-button is-collapsed"
-								id="facSearchButton" aria-label="트리 전체 펼치기"></button>
-						</div>
-						<nav class="tree-explorer__tree" aria-label="관리자 트리 메뉴">
-							<ul>
-								<li><button type="button" aria-expanded="true">시스템 관리</button>
-									<ul>
-										<li><button type="button">사용자 관리</button></li>
-										<li><button type="button">권한 관리</button></li>
-									</ul>
-								</li>
-								<li><button type="button" aria-expanded="false">콘텐츠 관리</button>
-									<ul>
-										<li><button type="button">메뉴 관리</button></li>
-										<li><button type="button">게시물 관리</button></li>
-									</ul>
-								</li>
-								<li><button type="button" aria-expanded="false">설비 관리</button>
-									<ul>
-										<li><button type="button">설비 정보</button></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</section>
-				</div>
-				<button type="button" data-panel-toggle aria-expanded="false" aria-label="좌측 패널 열기"></button>
-			</aside>
-			<section class="admin-content" aria-label="관리 콘텐츠">
-				<div class="tabs" data-tab-content-loader>
-					<ul class="nav nav-tabs" id="admin-tabs" role="tablist" aria-label="관리 화면 탭">
-						<li class="nav-item" role="presentation"><button class="nav-link active" id="tab-dashboard"
-								data-bs-toggle="tab" data-bs-target="#panel-dashboard" type="button" role="tab"
-								aria-controls="panel-dashboard" aria-selected="true">대시보드</button></li>
-						<li class="nav-item" role="presentation"><button class="nav-link" id="tab-users"
-								data-bs-toggle="tab" data-bs-target="#panel-users" type="button" role="tab"
-								aria-controls="panel-users" aria-selected="false">사용자 관리</button></li>
-						<li class="nav-item" role="presentation"><button class="nav-link" id="tab-permissions"
-								data-bs-toggle="tab" data-bs-target="#panel-permissions" type="button" role="tab"
-								aria-controls="panel-permissions" aria-selected="false">권한 관리</button></li>
-						<li class="nav-item" role="presentation"><button class="nav-link" id="tab-equipment"
-								data-bs-toggle="tab" data-bs-target="#panel-equipment" type="button" role="tab"
-								aria-controls="panel-equipment" aria-selected="false" data-tab-key="equipment"
-								data-page="/admin/pages/equipment-information.html">설비정보</button></li>
-					</ul>
-					<div class="tab-content" id="admin-tab-content" aria-live="polite">
-						<div class="tab-pane fade show active" id="panel-dashboard" role="tabpanel"
-							aria-labelledby="tab-dashboard" tabindex="0">
-							<p>관리할 메뉴를 선택하세요.</p>
-						</div>
-						<div class="tab-pane fade" id="panel-users" role="tabpanel" aria-labelledby="tab-users"
-							tabindex="0">
-							<p>사용자 관리 콘텐츠 영역</p>
-						</div>
-						<div class="tab-pane fade" id="panel-permissions" role="tabpanel"
-							aria-labelledby="tab-permissions" tabindex="0">
-							<p>권한 관리 콘텐츠 영역</p>
-						</div>
-						<div class="tab-pane fade" id="panel-equipment" role="tabpanel" aria-labelledby="tab-equipment"
-							tabindex="0"></div>
-					</div>
-				</div>
-			</section>
-		</main>
-	</div>
+	<script>
+		window.location.replace("./dashboard/index.html");
+	</script>
 </body>
 
 </html>

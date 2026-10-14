@@ -1,0 +1,91 @@
+/* Sidebar: the layout reserves 96px even when expanded. */
+.sidebar {
+	position: fixed;
+	inset-block: 0;
+	inset-inline-start: 0;
+	z-index: 100;
+	width: 96px;
+	display: none;
+	flex-direction: column;
+	overflow-y: auto;
+	background: var(--bg-neutral-subtlest);
+	color: var(--fg-neutral-strong);
+}
+.sidebar[data-expanded="true"] {
+	display: flex;
+	width: 240px;
+	box-shadow: var(--box-shadow-3);
+}
+@media (min-width: 992px) {
+	.sidebar { display: flex; }
+}
+.sidebar > a {
+	display: flex;
+	align-items: center;
+	gap: var(--space-100);
+	min-height: 88px;
+	padding-inline: var(--space-300);
+	white-space: nowrap;
+}
+.sidebar > a img { flex-shrink: 0; }
+.sidebar > a strong { font-size: var(--fs-md); }
+.sidebar nav > ul { display: flex; flex-direction: column; gap: var(--space-200); padding: 0 var(--space-300) var(--space-300); }
+.sidebar nav > ul > li > a {
+	display: flex;
+	align-items: center;
+	gap: var(--space-150);
+	width: 100%;
+	min-height: 48px;
+	padding-inline: var(--space-150);
+	border: 1px solid transparent;
+	border-radius: var(--radius-sm);
+	color: inherit;
+	text-align: start;
+	white-space: nowrap;
+}
+.sidebar[data-expanded="false"] :is(strong, nav > ul > li > a > span) { display: none; }
+.sidebar[data-expanded="false"] nav > ul > li > ul { display: none; }
+.sidebar[data-expanded="false"] nav > ul > li > a {
+	width: 48px;
+	height: 48px;
+	justify-content: center;
+	padding: 0;
+}
+.sidebar nav > ul > li > [aria-current="page"],
+.sidebar nav > ul > li > a:hover {
+	background: var(--bg-white);
+	border-color: var(--border-primary-subtle);
+	border-radius: var(--radius-sm);
+	color: var(--fg-primary-strong);
+}
+.sidebar[data-expanded="true"] nav > ul > li > a {
+	padding-inline: var(--space-300);
+}
+
+.sidebar [data-submenu-toggle][aria-expanded="true"]::before { transform: rotate(180deg); }
+.sidebar nav > ul > li > ul a { display: block; padding: var(--space-100) var(--space-150); margin-inline-start: var(--space-450); font-size: var(--fs-sm); }
+.sidebar nav :is(a, button):hover { color: var(--fg-primary-strong); }
+
+/* Outside the sidebar so its scrolling area does not clip the tooltip. */
+.sidebar-flyout {
+	position: fixed;
+	z-index: 110;
+	max-width: calc(100vw - 16px);
+	padding: var(--space-100) var(--space-150);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-sm);
+	background: var(--bg-white);
+	color: var(--fg-neutral-strong);
+	box-shadow: var(--box-shadow-1);
+	font-size: var(--fs-sm);
+	overflow-wrap: anywhere;
+}
+
+.sidebar nav > ul > li { position: relative; }
+.sidebar [data-submenu-toggle] { position: absolute; inset-block-start: 4px; inset-inline-end: 12px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: inherit; border-radius: var(--radius-sm); }
+.sidebar[data-expanded="false"] [data-submenu-toggle] { display: none; }
+.sidebar[data-expanded="true"] nav > ul > li > a { padding-inline-end: 56px; }
+.sidebar-flyout { min-width: 160px; max-height: calc(100dvh - 16px); overflow-y: auto; }
+.sidebar-flyout > strong { display: block; padding: var(--space-050) var(--space-100); font-weight: var(--fw-bold); }
+.sidebar-flyout a { display: block; padding: var(--space-100); border-radius: var(--radius-xs); color: inherit; }
+.sidebar-flyout a:hover, .sidebar-flyout a:focus-visible { background: var(--bg-primary-subtler); color: var(--fg-primary-strong); }

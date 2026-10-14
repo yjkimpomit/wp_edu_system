@@ -139,7 +139,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-	border: 1px solid transparent;
+	border: 1px solid var(--scrollbar-border);
 	border-inline-start-width: var(--scrollbar-track-inset);
 	background-color: var(--scrollbar-handle);
 	background-clip: padding-box;
@@ -237,3 +237,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
 	-moz-appearance: textfield;
 }
+
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-weight: var(--fw-bold);
+}
+

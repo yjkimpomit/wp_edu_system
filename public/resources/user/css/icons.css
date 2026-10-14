@@ -4,6 +4,7 @@
 	.icon-close,
 	.icon-timer,
 	.icon-hourglass,
+	.icon-lock,
 	.icon-search,
 	.icon-edit,
 	.icon-upload,
@@ -46,7 +47,7 @@
 	--icon-source: url('/resources/user/images/icons/timer.svg');
 }
 
-.icon-timer, [data-icon="lock"]::before {
+.icon-lock, [data-icon="lock"]::before {
 	--icon-source: url('/resources/user/images/icons/lock.svg');
 }
 
@@ -54,12 +55,118 @@
 	--icon-source: url('/resources/user/images/icons/hourglass.svg');
 }
 
-
-
 [data-icon="calendar"]::before {
 	--icon-source: url('/resources/user/images/icons/calendar.svg');
 }
 
 [data-icon="keyboard-down"]::before {
 	--icon-source: url('/resources/user/images/icons/keyboard_down.svg');
+}
+
+.btn[data-icon],
+.badge[data-icon] {
+	--icon-size: var(--icon-size-lg);
+}
+
+.badge-md[data-icon] {
+	--icon-size: var(--icon-size-sm);
+}
+
+.badge-lg[data-icon] {
+	--icon-size: var(--icon-size-md);
+}
+
+/* Native form icons */
+input.form-control[type="date"]::-webkit-calendar-picker-indicator {
+	width: var(--icon-size-md);
+	height: var(--icon-size-md);
+	margin: 0;
+	padding: 0;
+	background: url('/resources/user/images/icons/calendar.svg') center / contain no-repeat;
+	cursor: pointer;
+}
+
+select.form-select:not([multiple]):not([size]),
+select.form-select[size="1"]:not([multiple]) {
+	background-image: url('/resources/user/images/icons/keyboard_down.svg');
+	background-repeat: no-repeat;
+	background-position: right var(--space-100) center;
+	background-size: var(--icon-size-md);
+}
+
+/* Sidebar disclosure icon */
+.sidebar [data-submenu-toggle]::before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-color: currentColor;
+	mask: url('/resources/user/images/icons/keyboard_down.svg') center / contain no-repeat;
+}
+
+[data-icon="menu"]::before {
+	--icon-source: url('/resources/user/images/icons/menu.svg');
+}
+
+[data-icon="notification"]::before {
+	--icon-source: url('/resources/user/images/icons/notification.svg');
+}
+
+[data-icon="dashboard"]::before {
+	--icon-source: url('/resources/user/images/icons/dashboard.svg');
+}
+
+[data-icon="presentation"]::before {
+	--icon-source: url('/resources/user/images/icons/presentation.svg');
+}
+
+[data-icon="book"]::before {
+	--icon-source: url('/resources/user/images/icons/book.svg');
+}
+
+[data-icon="atom"]::before {
+	--icon-source: url('/resources/user/images/icons/atom.svg');
+}
+
+[data-icon="report"]::before {
+	--icon-source: url('/resources/user/images/icons/report.svg');
+}
+
+[data-icon="lifesaver"]::before {
+	--icon-source: url('/resources/user/images/icons/lifesaver.svg');
+}
+
+/* Search input decoration */
+.header input[type="search"] {
+	background-image: url('/resources/user/images/icons/search.svg');
+	background-repeat: no-repeat;
+	background-position: left var(--space-150) center;
+	background-size: var(--icon-size-lg);
+}
+
+/* 컴포넌트용 아이콘 - 임시사용 */
+.sidebar nav,
+.sidebar nav > ul {
+	height: 100%;
+}
+.sidebar nav li:last-child {
+	flex: 1;
+	min-height: 0;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+[data-icon="widgets"]::before {
+	--icon-source: url('/resources/user/images/icons/widgets.svg');
+}
+
+[data-icon="widgets"] {
+	--icon-color: var(--data-viz-09-default);
+	border-color: var(--border-neutral-subtler) !important;
+	background-color: var(--bg-neutral-subtler) !important;
+}
+
+[data-icon="widgets"]:hover {
+	--icon-color: var(--fg-white);
+	border-color: var(--data-viz-09-default) !important;
+	background-color: var(--data-viz-09-default) !important;
 }

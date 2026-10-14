@@ -4,8 +4,13 @@
 @import url('reset.css');
 @import url('icons.css');
 
-/* @import url('components.css');
+@import url('components.css');
+@import url('sidebar.css');
+@import url('header.css');
+@import url('dashboard.css');
+@import url('component-guide.css');
 
+/* 
 @import url('table.css');
 @import url('ztree.css');
 

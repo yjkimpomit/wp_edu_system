@@ -1,0 +1,10 @@
+body { color: var(--fg-neutral-strong); background: var(--bg-white); }
+body > a:focus { position: fixed; inset: 8px auto auto 104px; z-index: 200; padding: 8px; background: var(--bg-white); }
+.dashboard-shell { display: flex; min-height: 100vh; min-height: 100dvh; }
+.dashboard-shell > [data-include$="sidebar.html"] { flex: 0 0 0; width: 0; }
+.dashboard-shell > div:last-child { display: flex; flex-direction: column; flex: 1 1 auto; min-width: 0; }
+.dashboard-shell main { flex: 1 1 auto; min-width: 0; padding: var(--space-200); }
+@media (min-width: 992px) {
+	.dashboard-shell > [data-include$="sidebar.html"] { display: block; flex: 0 0 96px; width: 96px; }
+	.dashboard-shell main { padding: 0 var(--space-300) var(--space-300); }
+}

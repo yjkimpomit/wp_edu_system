@@ -294,9 +294,22 @@
 	/* semantic/box-shadow */
 	--box-shadow-1: 0 0 2px 1px var(--opacity-dark-16);
 	--box-shadow-2: 0 0 16px 4px var(--opacity-dark-32);
+	--box-shadow-3: 0 0 8px 2px var(--opacity-dark-16); /* sidebar expanded */
+
+	/* component/scrollbar */
+	--scrollbar-handle: var(--border-neutral-subtle);
+	--scrollbar-bg: var(--bg-neutral-subtler);
+	--scrollbar-border: var(--border-neutral-subtler);
+	--scrollbar-size: var(--space-100);
+	--scrollbar-track-inset: var(--space-025);
 
 	/* component/form */
-	--date-range-width: calc(var(--space-800) * 5);
+	--date-range-width: 320px;
+	--form-max-width: 480px;
+	--textarea-height: 80px;
+
+	/* pagination */
+	--pagination-input-width: 40px;
 }
 
 
