@@ -50,12 +50,16 @@ body[data-component-guide] {
 	background: var(--bg-primary-strongest);
 }
 
-:where([data-component-guide]) .btn-primary-default[data-preview="hover"] {
+:where([data-component-guide]) .btn-primary-ondark[data-preview="hover"] {
 	background: var(--bg-primary-default);
 }
 
-:where([data-component-guide]) .btn-primary-subtle[data-preview="hover"] {
-	background: var(--bg-primary-subtle);
+:where([data-component-guide]) .btn-secondary[data-preview="hover"] {
+	background: var(--bg-secondary-default);
+}
+
+:where([data-component-guide]) .btn-secondary-ondark[data-preview="hover"] {
+	background: var(--opacity-light-24);
 }
 
 :where([data-component-guide]) .btn-neutral[data-preview="hover"] {
@@ -94,6 +98,11 @@ body[data-component-guide] {
 	gap: var(--space-250);
 	flex-wrap: wrap;
 	align-items: center;
+}
+
+:where([data-component-guide]) [data-button-grid]>div:has(.btn-primary-ondark),
+:where([data-component-guide]) [data-button-grid]>div:has(.btn-secondary-ondark) {
+	background-color: var(--bg-primary-strongest);
 }
 
 :where([data-component-guide]) [data-icon-buttons] {

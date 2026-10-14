@@ -7,11 +7,19 @@
 	
 	<title>UI 컴포넌트 | 기동정지절차교육평가시스템</title>
 
-	<link rel="stylesheet" href="/resources/user/css/user.css"></head>
+	<link rel="stylesheet" href="/resources/user/css/user.css">
+</head>
 
 <body data-component-guide>
 	<main>
 		<h1>UI 컴포넌트</h1>
+		<section aria-labelledby="card-title">
+			<h2 id="card-title">Card</h2>
+			<article class="card" aria-labelledby="card-example-title">
+				<h3 id="card-example-title">카드 제목</h3>
+				<p>내용에 따라 카드 높이가 자연스럽게 조절됩니다.</p>
+			</article>
+		</section>
 		<section aria-labelledby="buttons-title">
 			<h2 id="buttons-title">Button</h2>
 			<figure data-button-grid aria-label="버튼 스타일과 크기 및 상태"></figure>
@@ -240,7 +248,7 @@
 	<script>
 		(() => {
 			'use strict';
-			const styles = ['primary', 'primary-default', 'primary-subtle', 'neutral', 'danger', 'success', 'warning', 'info'];
+			const styles = ['primary', 'primary-ondark', 'secondary', 'secondary-ondark', 'neutral', 'danger', 'success', 'warning', 'info'];
 			document.querySelector('[data-button-grid]').innerHTML = styles.map(style => '<div>' + ['md', 'lg', 'sm', 'xl'].map(size => '<div>' + ['default', 'hover', 'disabled'].map(state => '<button type="button" data-icon="search" class="btn btn-' + style + ' btn-' + size + '"' + (state === 'disabled' ? ' disabled' : state === 'hover' ? ' data-preview="hover"' : '') + ' aria-label="' + style + ' ' + size + ' ' + state + '">' + '<span>버튼</span></button>').join('') + '</div>').join('') + '</div>').join('');
 			document.querySelector('[data-icon-buttons]').innerHTML = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'purple', 'plain'].map(style => '<button type="button" data-icon="hourglass" class="btn btn-icon btn-' + style + '" aria-label="' + style + ' 대기 시간">' + '</button>').join('');
 			const badgeStyles = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'purple'];

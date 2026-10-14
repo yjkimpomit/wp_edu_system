@@ -123,6 +123,22 @@ select.form-select[size="1"]:not([multiple]) {
 	--icon-source: url('/resources/user/images/icons/book.svg');
 }
 
+[data-icon="file-edit"]::before {
+	--icon-source: url('/resources/user/images/icons/file_edit.svg');
+}
+
+[data-icon="book-open"]::before {
+	--icon-source: url('/resources/user/images/icons/book_open.svg');
+}
+
+[data-icon="file-write"]::before {
+	--icon-source: url('/resources/user/images/icons/file_write.svg');
+}
+
+[data-icon="bar-chart"]::before {
+	--icon-source: url('/resources/user/images/icons/bar_chart.svg');
+}
+
 [data-icon="atom"]::before {
 	--icon-source: url('/resources/user/images/icons/atom.svg');
 }

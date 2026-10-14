@@ -1,20 +1,195 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>대시보드 | 기동정지절차교육평가시스템</title>
-	<link rel="stylesheet" href="/resources/user/css/user.css">	<script src="/resources/user/js/sidebar/sidebar.js" defer></script>	<!-- HTML 퍼블리싱 전용 공통 문서 로더 -->
+	<link rel="stylesheet" href="/resources/user/css/user.css">
+	<script src="/resources/user/js/sidebar/sidebar.js" defer></script>
+	<script src="/resources/user/js/content-switcher/content-switcher.js" defer></script>
+	<script src="/resources/user/js/dashboard/dashboard.js" defer></script>
+	<!-- HTML 퍼블리싱 전용 공통 문서 로더 -->
 	<script src="/resources/user/js/temp/temp.js" defer></script>
 </head>
+
 <body>
 	<a class="visually-hidden-focusable" href="#dashboard-content">본문 바로가기</a>
 	<div class="dashboard-shell">
 		<div data-include="../sidebar.html"></div>
 		<div>
 			<div data-include="../header.html"></div>
-			<main id="dashboard-content" tabindex="-1" aria-label="대시보드 콘텐츠"></main>
+			<main id="dashboard-content" tabindex="-1" aria-label="대시보드 콘텐츠">
+				<h1 class="visually-hidden">대시보드</h1>
+				<div class="dashboard-grid">
+					<div>
+						<section class="card" aria-labelledby="priority-title" data-priority>
+							<div>
+								<p>오늘의 우선 학습</p>
+								<div>
+									<h2 id="priority-title">평택 BTG1 Cold 기동 절차 평가</h2><span>PTK-BTG1-COLD&nbsp; 50문항 · 60분</span>
+								</div>
+							</div>
+							<div>
+								<button class="btn btn-primary-ondark btn-xl" type="button">교육영상 보기</button>
+								<button class="btn btn-secondary-ondark btn-xl" type="button">조작 연습</button>
+								<button class="btn btn-secondary-ondark btn-xl" type="button" disabled>평가 시작</button>
+							</div>
+						</section>
+						<dl aria-label="평가 요약">
+							<div>
+								<dt>대기중인 평가</dt>
+								<dd>80점<span data-icon="hourglass" aria-hidden="true"></span></dd>
+							</div>
+							<div>
+								<dt>응시 가능</dt>
+								<dd>1건<span data-icon="file-edit" aria-hidden="true"></span></dd>
+							</div>
+							<div>
+								<dt>교육 필요</dt>
+								<dd>1건<span data-icon="book-open" aria-hidden="true"></span></dd>
+							</div>
+							<div>
+								<dt>오답 복습</dt>
+								<dd>7문항<span data-icon="file-write" aria-hidden="true"></span></dd>
+							</div>
+							<div>
+								<dt>최근 점수</dt>
+								<dd>86점<span data-icon="bar-chart" aria-hidden="true"></span></dd>
+							</div>
+						</dl>
+						<section class="card" aria-labelledby="assessment-title" data-assessments>
+							<header>
+								<div>
+									<h2 id="assessment-title">대기중인 평가</h2>
+									<p>전체 <span data-assessment-count>3</span>건</p>
+								</div>
+								<div class="content-switcher" role="group" aria-label="평가 상태 필터">
+									<button type="button" data-filter="all" aria-pressed="true">전체</button>
+									<button type="button" data-filter="available" aria-pressed="false">응시가능</button>
+									<button type="button" data-filter="education" aria-pressed="false">교육필요</button>
+									<button type="button" data-filter="complete" aria-pressed="false">완료</button>
+								</div>
+							</header>
+							<ul tabindex="0" aria-label="평가 목록">
+								<li data-assessment-state="available">
+									<div><span>마감임박</span><strong>D-2</strong></div>
+									<div>
+										<div>
+											<span class="badge badge-light">정기평가</span>
+											<span class="badge badge-solid">오늘의 우선학습</span>
+											<span class="badge badge-solid badge-warning">응시 가능</span>
+										</div>
+										<h3>평택 BTG1 Cold 기동 절차 평가</h3>
+										<p>평가 전 교육영상 시청과 OWS 객체 조작 연습 필요</p>
+									</div>
+									<div>
+										<button class="btn btn-primary btn-md" type="button">교육영상</button>
+										<button class="btn btn-neutral btn-md" type="button">조작 연습</button>
+										<button class="btn btn-neutral btn-md" type="button" disabled>평가시작</button>
+									</div>
+								</li>
+								<li data-assessment-state="education">
+									<div><span>마감예정</span><strong>D-8</strong></div>
+									<div>
+										<div>
+											<span class="badge badge-light">정기평가</span>
+											<span class="badge badge-solid badge-purple">교육 필요</span>
+										</div>
+										<h3>평택 BTG1 Hot 정지 절차 평가</h3>
+										<p>교육영상 시청 완료 · 오답률 기반 출제확률 반영</p>
+									</div>
+									<div>
+										<button class="btn btn-primary btn-md" type="button">평가 시작</button>
+										<button class="btn btn-neutral btn-md" type="button">응시 안내</button>
+									</div>
+								</li>
+								<li data-assessment-state="complete">
+									<div><span>응시완료</span><strong>D-00</strong></div>
+									<div>
+										<div>
+											<span class="badge badge-light">상시평가</span>
+											<span class="badge badge-solid badge-neutral">완료</span>
+										</div>
+										<h3>평택 BTG2 Hot 정지 절차 평가</h3>
+										<p>점수 86점 · 오답 7문항 · 오답 영상 재시청 필요</p>
+									</div>
+									<div>
+										<button class="btn btn-secondary btn-md" type="button">결과 확인</button>
+										<button class="btn btn-neutral btn-md" type="button" disabled>오답 해설</button>
+									</div>
+								</li>
+								<li data-assessment-state="complete">
+									<div><span>응시완료</span><strong>D-00</strong></div>
+									<div>
+										<div><span class="badge badge-light">상시평가</span><span class="badge badge-solid badge-neutral">완료</span></div>
+										<h3>평택 BTG2 Hot 정지 절차 평가</h3>
+										<p>점수 86점 · 오답 7문항 · 오답 영상 재시청 필요</p>
+									</div>
+									<div>
+										<button class="btn btn-secondary btn-md" type="button">결과 확인</button>
+										<button class="btn btn-neutral btn-md" type="button" disabled>오답 해설</button></div>
+								</li>
+							</ul>
+						<p class="visually-hidden" role="status" data-filter-status></p>
+						</section>
+						<section class="card" aria-labelledby="weak-title" data-weakness>
+							<h2 id="weak-title">최근 취약 절차</h2>
+							<ul>
+								<li>
+									<div>
+										<h3>03. 보일러 예열</h3>
+										<p>오답률 42% · 관련 오답 3문항</p>
+									</div><button class="btn btn-neutral btn-md" type="button">영상보기</button>
+								</li>
+								<li>
+									<div>
+										<h3>07. 계통 병입</h3>
+										<p>오답률 35% · 관련 오답 2문항</p>
+									</div><button class="btn btn-neutral btn-md" type="button">복습하기</button>
+								</li>
+							</ul>
+						</section>
+					</div>
+					<aside aria-label="평가 안내 및 서비스">
+						<section class="card" aria-labelledby="guide-title" data-guide>
+							<header><img src="/resources/user/images/weepy/weepy_01.svg" width="80" height="80" alt="">
+								<div>
+									<p>위피 안내</p>
+									<h2 id="guide-title">평가 준비를 시작하세요.</h2>
+									<p>교육영상과 조작 연습을 완료하면 평가를 시작할 수 있습니다.</p>
+								</div>
+							</header>
+							<ol>
+								<li aria-current="step"><span aria-hidden="true">✓</span><strong>교육영상</strong><span class="badge badge-outlined badge-danger">필요</span></li>
+								<li><span aria-hidden="true">2</span><strong>조작 연습</strong><span class="badge badge-outlined badge-warning">대기</span></li>
+								<li><span aria-hidden="true">3</span><strong>평가 시작</strong><span class="badge badge-outlined badge-neutral">잠김</span></li>
+								<li><span aria-hidden="true">4</span><strong>오답복습</strong><span class="badge badge-outlined badge-neutral">대기</span></li>
+							</ol>
+						</section>
+						<section class="card" aria-labelledby="notice-title" data-notices>
+							<h2 id="notice-title">공지사항</h2>
+							<ul>
+								<li><a href="../helpdesk/index.html">6월 정기평가 일정 안내</a><time datetime="2026-06-01">2026.06.01</time></li>
+								<li><a href="../helpdesk/index.html">평가 중 타 프로그램 사용 제한 안내</a><time datetime="2026-05-28">2026.05.28</time></li>
+								<li><a href="../helpdesk/index.html">교육영상 시청 이력 반영 안내</a><time datetime="2026-05-21">2026.05.21</time></li>
+								<li><a href="../helpdesk/index.html">제어화면 객체 Tag 업데이트</a><time datetime="2026-05-20">2026.05.20</time></li>
+								<li><a href="../helpdesk/index.html">5월 상시평가 일정 안내</a><time datetime="2026-05-01">2026.05.01</time></li>
+							</ul>
+						</section>
+						<nav class="card" aria-labelledby="shortcut-title">
+							<h2 id="shortcut-title">서비스 바로가기</h2>
+							<ul>
+								<li><a href="../education/index.html"><img src="/resources/user/images/icons/book.svg" width="24" height="24" alt="">절차 교육</a></li>
+								<li><a href="../helpdesk/index.html"><img src="/resources/user/images/icons/guidebook.svg" width="24" height="24" alt="">평가방법 안내</a></li>
+								<li><a href="../helpdesk/index.html"><img src="/resources/user/images/icons/lifesaver.svg" width="24" height="24" alt="">HELP DESK</a></li>
+							</ul>
+						</nav>
+					</aside>
+				</div>
+			</main>
 		</div>
 	</div>
 </body>
+
 </html>

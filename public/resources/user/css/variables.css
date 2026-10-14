@@ -10,11 +10,14 @@
 
 	--font-family-base: "Noto Sans KR";
 	
-		/* semantic/font-size */
+	/* semantic/font-size */
+	--fs-xs: 13px;
 	--fs-sm: 14px;
 	--fs-md: 16px;
-	--fs-lg: 20px;
+	--fs-lg: 18px;
 	--fs-xl: 24px;
+	--fs-2xl: 28px;
+
 	/* semantic/font-weight */
 	--fw-regular: 400;
 	--fw-medium: 500;

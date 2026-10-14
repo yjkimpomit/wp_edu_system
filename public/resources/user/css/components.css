@@ -19,6 +19,24 @@
 	padding-inline: var(--space-050);
 }
 
+/* Card */
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--space-200);
+	padding: var(--space-250) var(--space-300);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-lg);
+	background: var(--bg-white);
+}
+
+@media(min-width: 768px) {
+	.card {
+		padding: var(--space-300) var(--space-400);
+	}
+}
+
 /* Button */
 .btn {
 	min-height: var(--height-40);
@@ -53,23 +71,33 @@
 	background: var(--bg-primary-strongest);
 }
 
-.btn-primary-default {
+.btn-primary-ondark {
 	background: var(--bg-primary-strong);
 	border-color: var(--border-primary-default);
 }
 
-.btn-primary-default:hover {
+.btn-primary-ondark:hover {
 	background: var(--bg-primary-default);
 }
 
-.btn-primary-subtle {
+.btn-secondary {
 	color: var(--fg-primary-strong);
 	background: var(--bg-primary-subtler);
 	border-color: var(--border-primary-subtle);
 }
 
-.btn-primary-subtle:hover {
+.btn-secondary:hover {
 	background: var(--bg-primary-subtle);
+}
+
+.btn-secondary-ondark {
+	color: var(--fg-white);
+	background: var(--opacity-light-16);
+	border-color: var(--opacity-light-24);
+}
+
+.btn-secondary-ondark:hover {
+	background: var(--opacity-light-24);
 }
 
 .btn-neutral {
@@ -623,4 +651,29 @@ select.form-select[size="1"]:not([multiple]) {
 .sample-size {
 	background-color: var(--bg-neutral-subtlest);
 	height: 600px;
+}
+
+/* Content switcher */
+.content-switcher {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: var(--space-100);
+	padding: var(--space-025);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-md);
+	background: var(--bg-neutral-subtler);
+}
+
+.content-switcher > button {
+	padding: var(--space-050) var(--space-200);
+	border-radius: var(--radius-sm);
+	font-size: var(--fs-sm);
+}
+
+.content-switcher > button[aria-pressed="true"] {
+	background: var(--bg-white);
+	color: var(--fg-primary-strong);
+	font-weight: var(--fw-bold);
+	box-shadow: 0 0 0 1px var(--border-neutral-subtle), 0 1px 4px var(--opacity-dark-16);
 }
