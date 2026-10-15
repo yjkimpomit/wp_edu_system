@@ -1,0 +1,36 @@
+.app-shell {
+	display: flex;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+.app-shell>[data-include$="sidebar.html"] {
+	flex: 0 0 0;
+	width: 0;
+}
+
+.app-shell>div:last-child {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.app-shell main {
+	flex: 1 1 auto;
+	min-width: 0;
+	padding: var(--space-200);
+}
+
+@media (min-width: 992px) {
+	.app-shell>[data-include$="sidebar.html"] {
+		display: block;
+		flex: 0 0 96px;
+		width: 96px;
+	}
+
+	.app-shell main {
+		padding: 0 var(--space-300) var(--space-300);
+	}
+}
+

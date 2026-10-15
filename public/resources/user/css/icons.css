@@ -1,5 +1,6 @@
 /* Mask icons: color follows currentColor and can be overridden with --icon-color. */
 [data-icon]::before,
+[aria-current="step"] .guide-step-number::before,
 :is(
 	.icon-close,
 	.icon-timer,
@@ -35,8 +36,14 @@
 .icon-close {
 	--icon-source: url('/resources/user/images/icons/close.svg');
 }
-[data-icon]::before {
+[data-icon]::before,
+[aria-current="step"] .guide-step-number::before {
 	content: "";
+}
+
+[data-icon="check"]::before,
+[aria-current="step"] .guide-step-number::before {
+	--icon-source: url('/resources/user/images/icons/check.svg');
 }
 
 .icon-search, [data-icon="search"]::before {
@@ -123,6 +130,10 @@ select.form-select[size="1"]:not([multiple]) {
 	--icon-source: url('/resources/user/images/icons/book.svg');
 }
 
+[data-icon="guidebook"]::before {
+	--icon-source: url('/resources/user/images/icons/guidebook.svg');
+}
+
 [data-icon="file-edit"]::before {
 	--icon-source: url('/resources/user/images/icons/file_edit.svg');
 }
@@ -176,13 +187,14 @@ select.form-select[size="1"]:not([multiple]) {
 }
 
 [data-icon="widgets"] {
-	--icon-color: var(--data-viz-09-default);
+	--icon-color: var(--data-viz-08-soft);
 	border-color: var(--border-neutral-subtler) !important;
 	background-color: var(--bg-neutral-subtler) !important;
 }
 
 [data-icon="widgets"]:hover {
+	color: var(--fg-white) !important;
 	--icon-color: var(--fg-white);
-	border-color: var(--data-viz-09-default) !important;
-	background-color: var(--data-viz-09-default) !important;
+	border-color: var(--data-viz-08-default) !important;
+	background-color: var(--data-viz-08-default) !important;
 }

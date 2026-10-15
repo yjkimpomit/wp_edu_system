@@ -9,7 +9,7 @@ body[data-component-guide] {
 	padding: var(--space-250);
 }
 
-:where([data-component-guide]) h1 {
+:where([data-component-guide]) .title-h1 {
 	font-size: var(--fs-xl);
 	margin-block-end: var(--space-400);
 }
@@ -20,13 +20,13 @@ body[data-component-guide] {
 	padding-block-start: var(--space-200);
 }
 
-:where([data-component-guide]) h2 {
+:where([data-component-guide] main > section) > .title-h2 {
 	color: var(--fg-accent-purple-strong);
 	font-size: var(--fs-lg);
 	margin-block-end: var(--space-400);
 }
 
-:where([data-component-guide]) h3 {
+:where([data-component-guide]) .title-h3:where(:not(.title-group *)) {
 	font-size: var(--fs-md);
 	margin-block-end: var(--space-200);
 }

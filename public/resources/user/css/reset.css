@@ -117,8 +117,10 @@ section {
 
 /* 기본 설정 */
 body {
-	color: var(--body-fg);
+	color: var(--fg-neutral-strong);
+	background: var(--bg-white);
 	font-size: var(--fs-md);
+	line-height: 1.5;
 }
 
 /* Global scrollbar */

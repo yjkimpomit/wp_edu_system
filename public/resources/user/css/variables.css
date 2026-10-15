@@ -20,7 +20,7 @@
 
 	/* semantic/font-weight */
 	--fw-regular: 400;
-	--fw-medium: 500;
+	--fw-medium: 600;
 	--fw-bold: 700;
 		/* semantic/icon-size */
 	--icon-size-sm: 16px;
@@ -129,8 +129,8 @@
 	--yellow-400: #F5D745;
 	--yellow-500: #FBBF24;
 	--yellow-600: #F59E0B;
-	--yellow-700: #EB7E00;
-	--yellow-800: #BE5404;
+	--yellow-700: #CC6D00;
+	--yellow-800: #B45004;
 	--yellow-900: #732B07;
 
 	/* primitive/sky */
@@ -266,10 +266,14 @@
 	--fg-result-fail-strong: var(--red-700);
 
 	/* semantic/opacity */
+	--opacity-blue-32: color-mix(in srgb, var(--blue-500) 32%, transparent);
+	--opacity-blue-90: color-mix(in srgb, var(--blue-500) 90%, transparent);
+
 	--opacity-light-16: color-mix(in srgb, var(--white) 16%, transparent);
 	--opacity-light-24: color-mix(in srgb, var(--white) 24%, transparent);
 	--opacity-light-32: color-mix(in srgb, var(--white) 32%, transparent);
 	--opacity-light-00: color-mix(in srgb, var(--white) 0%, transparent);
+	
 	--opacity-dark-16: color-mix(in srgb, var(--black) 16%, transparent);
 	--opacity-dark-32: color-mix(in srgb, var(--black) 32%, transparent);
 	--opacity-dark-00: color-mix(in srgb, var(--black) 0%, transparent);

@@ -1,20 +1,54 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>결과/리포트 | 기동정지절차교육평가시스템</title>
-	<link rel="stylesheet" href="/resources/user/css/user.css">	<script src="/resources/user/js/sidebar/sidebar.js" defer></script>	<!-- HTML 퍼블리싱 전용 공통 문서 로더 -->
+	<link rel="stylesheet" href="/resources/user/css/user.css">
+	<script src="/resources/user/js/sidebar/sidebar.js" defer></script>
+	<!-- HTML 퍼블리싱 전용 공통 문서 로더 -->
 	<script src="/resources/user/js/temp/temp.js" defer></script>
 </head>
+
 <body>
-	<a class="visually-hidden-focusable" href="#dashboard-content">본문 바로가기</a>
-	<div class="dashboard-shell">
+	<a class="skip-link visually-hidden-focusable" href="#reports-content">본문 바로가기</a>
+	<div class="app-shell">
 		<div data-include="../sidebar.html"></div>
 		<div>
 			<div data-include="../header.html"></div>
-			<main id="dashboard-content" tabindex="-1" aria-label="결과/리포트 콘텐츠"></main>
+			<main id="reports-content" tabindex="-1" aria-label="결과/리포트 콘텐츠">
+				<h1 class="title-h1">결과/리포트</h1>
+
+				<!-- 검색필터링 -->
+				<form class="filter" id="filter-form">
+					<div class="filter-fields">
+						<div class="filter-group">
+							<label for="filter-start">검색기간</label>
+							<div class="date-range">
+								<input class="form-control form-lg" id="filter-start" type="date" value="2026-10-09">
+								<span aria-hidden="true">~</span>
+								<label class="visually-hidden" for="filter-end">검색 종료일</label>
+								<input class="form-control form-lg" id="filter-end" type="date" value="2026-10-09">
+							</div>
+						</div>
+						<div class="filter-group">
+							<label for="filter-item">응시항목</label>
+							<select class="form-select form-lg" id="filter-item">
+								<option>#1-4 LP HTR In/Out VV Auto Open</option>
+								<option>기동 절차</option>
+								<option>정지 절차</option>
+							</select>
+						</div>
+					</div>
+					<button class="btn btn-primary btn-lg" type="submit" data-icon="search"><span>검색</span></button>
+				</form>
+
+
+
+			</main>
 		</div>
 	</div>
 </body>
+
 </html>

@@ -35,6 +35,7 @@
 	flex-shrink: 0;
 	color: var(--fg-white);
 	background: var(--bg-primary-stronger);
+	border-color: var(--border-primary-strong);
 }
 
 .header input[type="search"] {
