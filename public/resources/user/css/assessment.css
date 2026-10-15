@@ -74,9 +74,11 @@
 
 .assessment-status.is-due {
 	color: var(--fg-danger-strong);
+	background-color: var(--bg-danger-subtler);
 }
 .assessment-status.is-scheduled {
 	color: var(--fg-warning-stronger);
+	background-color: var(--bg-warning-subtler);
 }
 
 .assessment-status strong {
