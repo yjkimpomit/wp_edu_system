@@ -29,8 +29,8 @@
 }
 .sidebar > a img { flex-shrink: 0; }
 .sidebar > a strong { font-size: var(--fs-md); }
-.sidebar nav > ul { display: flex; flex-direction: column; gap: var(--space-200); padding: 0 var(--space-300) var(--space-300); }
-.sidebar nav > ul > li > a {
+.sidebar-list { display: flex; flex-direction: column; gap: var(--space-200); padding: 0 var(--space-300) var(--space-300); }
+.sidebar .sidebar-link {
 	display: flex;
 	align-items: center;
 	gap: var(--space-150);
@@ -43,27 +43,27 @@
 	text-align: start;
 	white-space: nowrap;
 }
-.sidebar[data-expanded="false"] :is(strong, nav > ul > li > a > span) { display: none; }
-.sidebar[data-expanded="false"] nav > ul > li > ul { display: none; }
-.sidebar[data-expanded="false"] nav > ul > li > a {
+.sidebar[data-expanded="false"] :is(strong, .sidebar-link > span) { display: none; }
+.sidebar[data-expanded="false"] .sidebar-submenu-list { display: none; }
+.sidebar[data-expanded="false"] .sidebar-link {
 	width: 48px;
 	height: 48px;
 	justify-content: center;
 	padding: 0;
 }
-.sidebar nav > ul > li > [aria-current="page"],
-.sidebar nav > ul > li > a:hover {
+.sidebar .sidebar-link[aria-current="page"],
+.sidebar .sidebar-link:hover {
 	background: var(--bg-white);
 	border-color: var(--border-primary-subtle);
 	border-radius: var(--radius-sm);
 	color: var(--fg-primary-strong);
 }
-.sidebar[data-expanded="true"] nav > ul > li > a {
+.sidebar[data-expanded="true"] .sidebar-link {
 	padding-inline: var(--space-300);
 }
 
 .sidebar [data-submenu-toggle][aria-expanded="true"]::before { transform: rotate(180deg); }
-.sidebar nav > ul > li > ul a { display: block; padding: var(--space-100) var(--space-150); margin-inline-start: var(--space-450); font-size: var(--fs-sm); }
+.sidebar .sidebar-submenu-link { display: block; padding: var(--space-100) var(--space-150); margin-inline-start: var(--space-450); font-size: var(--fs-sm); }
 .sidebar nav :is(a, button):hover { color: var(--fg-primary-strong); }
 
 /* Outside the sidebar so its scrolling area does not clip the tooltip. */
@@ -81,10 +81,10 @@
 	overflow-wrap: anywhere;
 }
 
-.sidebar nav > ul > li { position: relative; }
+.sidebar-item { position: relative; }
 .sidebar [data-submenu-toggle] { position: absolute; inset-block-start: 4px; inset-inline-end: 12px; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; color: inherit; border-radius: var(--radius-sm); }
 .sidebar[data-expanded="false"] [data-submenu-toggle] { display: none; }
-.sidebar[data-expanded="true"] nav > ul > li > a { padding-inline-end: 56px; }
+.sidebar[data-expanded="true"] .sidebar-link { padding-inline-end: 56px; }
 .sidebar-flyout { min-width: 160px; max-height: calc(100dvh - 16px); overflow-y: auto; }
 .sidebar-flyout > strong { display: block; padding: var(--space-050) var(--space-100); font-weight: var(--fw-bold); }
 .sidebar-flyout a { display: block; padding: var(--space-100); border-radius: var(--radius-xs); color: inherit; }

@@ -28,6 +28,81 @@
 	padding-inline: var(--space-050);
 }
 
+/* Reusable three-column layout */
+.grid-3 {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: var(--space-300);
+}
+
+@media (min-width: 1600px) {
+	.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.empty-state {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-100);
+	min-height: 240px;
+	padding: var(--space-300);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-md);
+	background: var(--bg-neutral-subtlest);
+	text-align: center;
+}
+
+.feedback-note {
+	--icon-size: var(--icon-size-md);
+	text-align: left;
+	display: inline-flex;
+	align-items: stretch;
+	gap: var(--space-050);
+	font-size: var(--fs-sm);
+	font-weight: var(--fw-medium);
+}
+
+.feedback-note-neutral { color: var(--fg-neutral-strong); }
+.feedback-note-danger { color: var(--fg-danger-strong); }
+.feedback-note-success { color: var(--fg-success-strong); }
+.feedback-note-warning { color: var(--fg-warning-stronger); }
+.feedback-note-info { color: var(--fg-info-strong); }
+
+.feedback-card {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-100);
+	min-width: 0;
+	padding: var(--space-200);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-md);
+	background: var(--bg-neutral-subtler);
+}
+
+.feedback-card.is-primary {
+	border-color: var(--border-primary-subtler);
+	background: var(--bg-primary-subtler);
+}
+
+.feedback-card.is-danger {
+	border-color: var(--border-danger-subtler);
+	background: var(--bg-danger-subtler);
+}
+
+.feedback-card.is-warning {
+	border-color: var(--border-warning-subtler);
+	background: var(--bg-warning-subtler);
+}
+
+.feedback-content {
+	height: 120px;
+	overflow-y: auto;
+	padding: var(--space-100);
+	border: 1px solid var(--border-neutral-subtler);
+	border-radius: var(--radius-sm);
+	background: var(--bg-white);
+}
+
 /* Card */
 .card {
 	display: flex;
@@ -180,6 +255,7 @@
 /* Icon Button */
 .btn-icon {
 	width: var(--height-40);
+	height: var(--height-40);
 	padding: 0;
 	color: var(--fg-primary-strong);
 	background: var(--bg-primary-subtlest);
@@ -231,8 +307,6 @@
 /* Link */
 .link {
 	color: var(--fg-primary-strong);
-	text-decoration: underline;
-	text-underline-offset: var(--space-025);
 }
 
 /* Badge */
@@ -373,7 +447,6 @@
 
 .title-group > div:first-child {
 	flex: 1 1 auto;
-	align-items: baseline;
 }
 
 :where(.title-h1, .title-h2, .title-h3, .title-h4, .title-h5, .title-h6) {
@@ -564,6 +637,7 @@ select.form-select[size="1"]:not([multiple]) {
 	}
 
 	.filter-group {
+		flex: 1 0 auto;
 		flex-wrap: nowrap;
 		flex-direction: row;
 		align-items: center;

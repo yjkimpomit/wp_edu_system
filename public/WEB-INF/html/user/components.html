@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="/resources/user/css/user.css">
 </head>
 
-<body data-component-guide>
+<body class="component-guide">
 	<main>
 		<h1 class="title-h1">UI 컴포넌트</h1>
 		<section aria-labelledby="card-title">
@@ -22,7 +22,7 @@
 		</section>
 		<section aria-labelledby="buttons-title">
 			<h2 class="title-h2" id="buttons-title">Button</h2>
-			<figure data-button-grid aria-label="버튼 스타일과 크기 및 상태"></figure>
+			<figure class="button-examples" data-button-grid aria-label="버튼 스타일과 크기 및 상태"></figure>
 			<p>크기: 36 / 40 / 32 / 48 · 상태: 기본 / Hover / 비활성</p>
 		</section>
 		<section aria-labelledby="group-title">
@@ -33,7 +33,7 @@
 		</section>
 		<section aria-labelledby="icons-title">
 			<h2 class="title-h2" id="icons-title">Icon Button</h2>
-			<figure data-icon-buttons aria-label="아이콘 버튼"></figure>
+			<figure class="icon-button-examples" data-icon-buttons aria-label="아이콘 버튼"></figure>
 		</section>
 		<section aria-labelledby="link-title">
 			<h2 class="title-h2" id="link-title">Link</h2>
@@ -41,11 +41,21 @@
 		</section>
 		<section aria-labelledby="badges-title">
 			<h2 class="title-h2" id="badges-title">Badge</h2>
-			<figure data-badges aria-label="배지 스타일과 크기"></figure>
+			<figure class="badge-examples" data-badges aria-label="배지 스타일과 크기"></figure>
+		</section>
+		<section aria-labelledby="feedback-note-title">
+			<h2 class="title-h2" id="feedback-note-title">Feedback Note</h2>
+			<div class="card">
+				<p class="feedback-note feedback-note-neutral" data-icon="error"><span>Neutral · 과정별 응시결과표에서 순번을 선택해 주세요.</span></p>
+				<p class="feedback-note feedback-note-danger" data-icon="error"><span>Danger · 비상조치 순서에 대한 보완이 필요합니다.</span></p>
+				<p class="feedback-note feedback-note-success" data-icon="check-circle"><span>Success · 평가를 완료했습니다.</span></p>
+				<p class="feedback-note feedback-note-warning" data-icon="error"><span>Warning · 평가 시작 전 교육 이수 여부를 확인해 주세요.</span></p>
+				<p class="feedback-note feedback-note-info" data-icon="error"><span>Info · 평가 결과에서 문항별 분석을 확인할 수 있습니다.</span></p>
+			</div>
 		</section>
 		<section aria-labelledby="title-group-title">
 			<h2 class="title-h2" id="title-group-title">Title Group</h2>
-			<figure data-title-groups>
+			<figure class="title-group-examples">
 				<div class="title-group">
 					<div><h2 class="title-h2">교육 목록</h2><p>총 <strong>120</strong>건</p></div>
 					<div><button class="btn btn-primary btn-md" type="button">등록</button><button class="btn btn-neutral btn-md" type="button">목록</button></div>
@@ -55,7 +65,7 @@
 					<div><h3 class="title-h3">검색 결과</h3><p>검색 조건에 해당하는 항목입니다.</p></div>
 					<div>
 						<nav class="pagination" aria-label="검색 결과 페이지" data-pagination>
-							<form><label class="visually-hidden" for="result-page">이동할 페이지</label><input class="form-control" id="result-page" type="number" min="1" max="12" value="1" required aria-describedby="result-total"><span id="result-total">/ <span data-total-pages>12</span><span class="visually-hidden">페이지</span></span><button class="btn btn-neutral btn-sm" type="submit">이동</button></form>
+							<form><label class="visually-hidden" for="result-page">이동할 페이지</label><input class="form-control" id="result-page" type="number" min="1" max="12" value="1" required aria-describedby="result-total"><span id="result-total">/ <span>12</span><span class="visually-hidden">페이지</span></span><button class="btn btn-neutral btn-sm" type="submit">이동</button></form>
 							<button class="btn btn-neutral btn-sm" type="button" data-page-step="-1" aria-label="이전 페이지" disabled>이전</button><button class="btn btn-neutral btn-sm" type="button" data-page-step="1" aria-label="다음 페이지">다음</button>
 						</nav>
 						<button class="btn btn-neutral btn-sm" type="button" data-download-results>엑셀 다운로드</button>
@@ -102,60 +112,104 @@
 				</div>
 
 				<div class="title-group"><div><h5 class="title-h5">교육 안내</h5><p>교육 시작 전에 내용을 확인하세요.</p></div></div>
-
 				<div class="title-group"><div><h6 class="title-h6">참고 사항</h6></div><div><button class="btn btn-neutral btn-sm" type="button">전체 보기</button></div></div>
 			</figure>
 		</section>
 		<section aria-labelledby="forms-title">
 			<h2 class="title-h2" id="forms-title">Form</h2>
-			<div data-forms>
+			<div class="form-examples">
 				<figure>
 					<fieldset>
-						<legend class="visually-hidden">선택 입력 예시</legend><label><input type="radio" name="sample-choice"
-								checked>라디오 버튼</label><label><input type="radio" name="sample-choice">라디오
-							버튼</label><label><input type="checkbox" checked>체크박스</label><label><input
-								type="checkbox">체크박스</label>
+						<legend class="visually-hidden">선택 입력 예시</legend>
+						<label><input type="radio" name="sample-choice" checked>라디오 버튼</label>
+						<label><input type="radio" name="sample-choice">라디오 버튼</label>
+						<label><input type="checkbox" checked>체크박스</label>
+						<label><input type="checkbox">체크박스</label>
 					</fieldset>
 				</figure>
 				<figure>
-					<form aria-label="폼 컴포넌트 예시" onsubmit="return false">
-						<label class="visually-hidden" for="text-sm">기본 텍스트</label><input class="form-control"
-							id="text-sm" placeholder="플레이스 홀더">
-						<div class="date-range"><label class="visually-hidden" for="start-sm">시작일</label><input
-								class="form-control" id="start-sm" type="date" value="2026-10-09"><span
-								aria-hidden="true">~</span><label class="visually-hidden" for="end-sm">종료일</label><input
-								class="form-control" id="end-sm" type="date" value="2026-10-09"></div>
-						<p>플레이스 홀더</p><label class="visually-hidden" for="select-sm">기본 선택</label><select
-							class="form-select" id="select-sm">
+					<form class="filter-fields" aria-label="폼 컴포넌트 예시" onsubmit="return false">
+						<div class="filter-group">
+							<label class="visually-hidden" for="text-sm">기본 텍스트</label>
+							<input class="form-control" id="text-sm" placeholder="플레이스 홀더">
+						</div>
+
+						<div class="date-range">
+							<label class="visually-hidden" for="start-sm">시작일</label>
+							<input class="form-control" id="start-sm" type="date" value="2026-10-09">
+							<span aria-hidden="true">~</span>
+							<label class="visually-hidden" for="end-sm">종료일</label>
+							<input class="form-control" id="end-sm" type="date" value="2026-10-09">
+						</div>
+
+						<label class="visually-hidden" for="select-sm">기본 선택</label>
+						<select class="form-select" id="select-sm">
 							<option>플레이스 홀더</option>
 							<option>응시가능</option>
 							<option>교육필요</option>
 						</select>
-						<label class="visually-hidden" for="disabled-sm">비활성 입력</label><input class="form-control"
-							id="disabled-sm" placeholder="플레이스 홀더" disabled>
-						<div class="form-checks"><label><input type="radio" name="inline-choice" checked>라디오
-								버튼</label><label><input type="checkbox">체크박스</label></div>
-						<label class="visually-hidden" for="memo">내용</label><textarea class="form-control" id="memo"
-							placeholder="플레이스 홀더"></textarea>
-						<label class="visually-hidden" for="file-sm">파일 선택</label><input class="form-control"
-							id="file-sm" type="file">
-						<label for="text-lg"><strong>레이블</strong></label><input class="form-control form-lg"
-							id="text-lg" placeholder="플레이스 홀더">
-						<div class="date-range"><label class="visually-hidden" for="start-lg">큰 시작일</label><input
-								class="form-control form-lg" id="start-lg" type="date" value="2026-10-09"><span
-								aria-hidden="true">~</span><label class="visually-hidden" for="end-lg">큰
-								종료일</label><input class="form-control form-lg" id="end-lg" type="date"
-								value="2026-10-09"></div>
-						<label class="visually-hidden" for="disabled-lg">큰 비활성 입력</label><input
-							class="form-control form-lg" id="disabled-lg" placeholder="플레이스 홀더" disabled>
-						<label class="visually-hidden" for="select-lg">큰 선택</label><select class="form-select form-lg"
-							id="select-lg">
-							<option>플레이스 홀더</option>
-							<option>응시가능</option>
-							<option>교육필요</option>
-						</select>
-						<label for="file-lg"><strong>레이블</strong></label><input class="form-control form-lg"
-							id="file-lg" type="file">
+
+						<div class="filter-group">
+							<label class="visually-hidden" for="disabled-sm">비활성 입력</label>
+							<input class="form-control" id="disabled-sm" placeholder="플레이스 홀더" disabled>
+						</div>
+
+						<div class="filter-group">
+							<div class="form-checks">
+								<label><input type="radio" name="inline-choice1" checked>라디오 버튼</label>
+								<label><input type="radio" name="inline-choice2">라디오 버튼</label>
+							</div>
+								
+							<div class="form-checks">
+								<label><input type="checkbox" checked>체크박스</label>
+								<label><input type="checkbox">체크박스</label>
+							</div>
+						</div>
+
+						<div class="filter-group">
+							<label class="visually-hidden" for="memo">내용</label>
+							<textarea class="form-control" id="memo" placeholder="플레이스 홀더"></textarea>
+						</div>
+
+						<div class="filter-group">
+							<label for="file-sm">파일 선택</label>
+							<input class="form-control" id="file-sm" type="file">
+						
+						</div>
+
+						<div class="filter-group">
+							<label for="text-lg"><strong>레이블</strong></label>
+							<input class="form-control form-lg" id="text-lg" placeholder="플레이스 홀더">
+						</div>
+
+						<div class="filter-group">
+							<div class="date-range">
+								<label class="visually-hidden" for="start-lg">큰 시작일</label>
+								<input class="form-control form-lg" id="start-lg" type="date" value="2026-10-09">
+								<span aria-hidden="true">~</span>
+								<label class="visually-hidden" for="end-lg">큰 종료일</label>
+								<input class="form-control form-lg" id="end-lg" type="date" value="2026-10-09">
+							</div>
+						</div>
+
+						<div class="filter-group">
+							<label for="disabled-lg">큰 비활성 입력</label>
+							<input class="form-control form-lg" id="disabled-lg" placeholder="플레이스 홀더" disabled>
+						</div>
+
+						<div class="filter-group">
+							<label for="select-lg">큰 선택</label>
+							<select class="form-select form-lg" id="select-lg">
+								<option>플레이스 홀더</option>
+								<option>응시가능</option>
+								<option>교육필요</option>
+							</select>
+						</div>
+
+						<div class="filter-group">
+							<label for="file-lg"><strong>레이블</strong></label>
+							<input class="form-control form-lg" id="file-lg" type="file">
+						</div>
 					</form>
 				</figure>
 			</div>
@@ -164,20 +218,25 @@
 			<h2 class="title-h2" id="filter-title">Filter</h2>
 			<form class="filter" id="filter-form">
 				<div class="filter-fields">
-				<div class="filter-group"><label for="filter-start">검색기간</label>
-				<div class="date-range"><input class="form-control form-lg" id="filter-start" type="date"
-						value="2026-10-09"><span aria-hidden="true">~</span><label class="visually-hidden"
-						for="filter-end">검색 종료일</label><input class="form-control form-lg" id="filter-end" type="date"
-						value="2026-10-09"></div></div>
-				<div class="filter-group"><label for="filter-item">응시항목</label><select
-					class="form-select form-lg" id="filter-item">
-					<option>#1-4 LP HTR In/Out VV Auto Open</option>
-					<option>기동 절차</option>
-					<option>정지 절차</option>
-				</select></div>
+					<div class="filter-group">
+						<label for="filter-start">검색기간</label>
+						<div class="date-range">
+							<input class="form-control form-lg" id="filter-start" type="date" value="2026-10-09">
+							<span aria-hidden="true">~</span>
+							<label class="visually-hidden" for="filter-end">검색 종료일</label>
+							<input class="form-control form-lg" id="filter-end" type="date" value="2026-10-09">
+						</div>
+					</div>
+					<div class="filter-group">
+						<label for="filter-item">응시항목</label>
+						<select class="form-select form-lg" id="filter-item">
+							<option>#1-4 LP HTR In/Out VV Auto Open</option>
+							<option>기동 절차</option>
+							<option>정지 절차</option>
+						</select>
+					</div>
 				</div>
-				<button class="btn btn-primary btn-lg" type="submit"
-					data-icon="search"><span>검색</span></button>
+				<button class="btn btn-primary btn-lg" type="submit" data-icon="search"><span>검색</span></button>
 			</form>
 		</section>
 		<section aria-labelledby="tabs-title">
@@ -249,7 +308,7 @@
 		(() => {
 			'use strict';
 			const styles = ['primary', 'primary-ondark', 'secondary', 'secondary-ondark', 'neutral', 'danger', 'success', 'warning', 'info'];
-			document.querySelector('[data-button-grid]').innerHTML = styles.map(style => '<div>' + ['md', 'lg', 'sm', 'xl'].map(size => '<div>' + ['default', 'hover', 'disabled'].map(state => '<button type="button" data-icon="search" class="btn btn-' + style + ' btn-' + size + '"' + (state === 'disabled' ? ' disabled' : state === 'hover' ? ' data-preview="hover"' : '') + ' aria-label="' + style + ' ' + size + ' ' + state + '">' + '<span>버튼</span></button>').join('') + '</div>').join('') + '</div>').join('');
+			document.querySelector('[data-button-grid]').innerHTML = styles.map(style => '<div>' + ['md', 'lg', 'sm', 'xl'].map(size => '<div>' + ['default', 'hover', 'disabled'].map(state => '<button type="button" data-icon="search" class="btn btn-' + style + ' btn-' + size + (state === 'hover' ? ' is-preview-hover' : '') + '"' + (state === 'disabled' ? ' disabled' : '') + ' aria-label="' + style + ' ' + size + ' ' + state + '">' + '<span>버튼</span></button>').join('') + '</div>').join('') + '</div>').join('');
 			document.querySelector('[data-icon-buttons]').innerHTML = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'purple', 'plain'].map(style => '<button type="button" data-icon="hourglass" class="btn btn-icon btn-' + style + '" aria-label="' + style + ' 대기 시간">' + '</button>').join('');
 			const badgeStyles = ['primary', 'neutral', 'success', 'danger', 'warning', 'info', 'purple'];
 			document.querySelector('[data-badges]').innerHTML = ['', 'outlined'].map(type => badgeStyles.map(style => '<div>' + ['md', 'lg', 'xl'].map(size => '<span data-icon="lock" class="badge badge-' + style + ' badge-' + size + (type ? ' badge-' + type : '') + '">' + '<span>필요</span></span>').join('') + '</div>').join('')).join('') + '<div>' + ['md', 'lg', 'xl'].map(size => '<span data-icon="timer" class="badge badge-light badge-' + size + '">' + '<span>필요</span></span>').join('') + '</div><footer>' + badgeStyles.map(style => '<span class="badge badge-solid badge-' + style + '">오늘의 우선학습</span>').join('') + '</footer>';

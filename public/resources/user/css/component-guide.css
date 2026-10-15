@@ -1,37 +1,37 @@
-body[data-component-guide] {
+body.component-guide {
 	font-weight: var(--fw-regular);
 	color: var(--fg-neutral-strong);
 	background: var(--bg-white);
 	font-size: var(--fs-md);
 }
 
-:where([data-component-guide]) main {
+:where(.component-guide) main {
 	padding: var(--space-250);
 }
 
-:where([data-component-guide]) .title-h1 {
+:where(.component-guide) .title-h1 {
 	font-size: var(--fs-xl);
 	margin-block-end: var(--space-400);
 }
 
-:where([data-component-guide]) main>section {
+:where(.component-guide) main>section {
 	margin-block-end: var(--space-400);
 	border-block-start: calc(var(--space-025) / 2) solid var(--border-accent-purple-subtler);
 	padding-block-start: var(--space-200);
 }
 
-:where([data-component-guide] main > section) > .title-h2 {
+:where(.component-guide main > section) > .title-h2 {
 	color: var(--fg-accent-purple-strong);
 	font-size: var(--fs-lg);
 	margin-block-end: var(--space-400);
 }
 
-:where([data-component-guide]) .title-h3:where(:not(.title-group *)) {
+:where(.component-guide) .title-h3:where(:not(.title-group *)) {
 	font-size: var(--fs-md);
 	margin-block-end: var(--space-200);
 }
 
-:where([data-component-guide]) figure {
+:where(.component-guide) figure {
 	display: flex;
 	gap: var(--space-800);
 	border: 1px dashed var(--border-accent-purple-subtler);
@@ -42,57 +42,57 @@ body[data-component-guide] {
 	overflow: auto;
 }
 
-:where([data-component-guide]) figure>p {
+:where(.component-guide) figure>p {
 	margin-block-end: var(--space-200);
 }
 
-:where([data-component-guide]) .btn-primary[data-preview="hover"] {
+:where(.component-guide) .btn-primary.is-preview-hover {
 	background: var(--bg-primary-strongest);
 }
 
-:where([data-component-guide]) .btn-primary-ondark[data-preview="hover"] {
+:where(.component-guide) .btn-primary-ondark.is-preview-hover {
 	background: var(--bg-primary-default);
 }
 
-:where([data-component-guide]) .btn-secondary[data-preview="hover"] {
+:where(.component-guide) .btn-secondary.is-preview-hover {
 	background: var(--bg-secondary-default);
 }
 
-:where([data-component-guide]) .btn-secondary-ondark[data-preview="hover"] {
+:where(.component-guide) .btn-secondary-ondark.is-preview-hover {
 	background: var(--opacity-light-24);
 }
 
-:where([data-component-guide]) .btn-neutral[data-preview="hover"] {
+:where(.component-guide) .btn-neutral.is-preview-hover {
 	background: var(--bg-neutral-subtlest);
 }
 
-:where([data-component-guide]) .btn-danger[data-preview="hover"] {
+:where(.component-guide) .btn-danger.is-preview-hover {
 	background: var(--bg-danger-strongest);
 }
 
-:where([data-component-guide]) .btn-success[data-preview="hover"] {
+:where(.component-guide) .btn-success.is-preview-hover {
 	background: var(--bg-success-strongest);
 }
 
-:where([data-component-guide]) .btn-warning[data-preview="hover"] {
+:where(.component-guide) .btn-warning.is-preview-hover {
 	background: var(--bg-warning-strongest);
 }
 
-:where([data-component-guide]) .btn-info[data-preview="hover"] {
+:where(.component-guide) .btn-info.is-preview-hover {
 	background: var(--bg-info-strongest);
 }
 
-:where([data-component-guide]) [data-button-grid]>div {
+:where(.component-guide) .button-examples>div {
 	display: grid;
 	gap: var(--space-200);
 	margin-block-end: var(--space-300);
 }
 
-:where([data-component-guide]) [data-button-grid]>div:last-child {
+:where(.component-guide) .button-examples>div:last-child {
 	margin-block-end: 0;
 }
 
-:where([data-component-guide]) [data-button-grid]>div>div {
+:where(.component-guide) .button-examples>div>div {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-250);
@@ -100,23 +100,23 @@ body[data-component-guide] {
 	align-items: center;
 }
 
-:where([data-component-guide]) [data-button-grid]>div:has(.btn-primary-ondark),
-:where([data-component-guide]) [data-button-grid]>div:has(.btn-secondary-ondark) {
+:where(.component-guide) .button-examples>div:has(.btn-primary-ondark),
+:where(.component-guide) .button-examples>div:has(.btn-secondary-ondark) {
 	background-color: var(--bg-primary-strongest);
 }
 
-:where([data-component-guide]) [data-icon-buttons] {
+:where(.component-guide) .icon-button-examples {
 	display: flex;
 	flex-wrap: wrap;
 	gap: var(--space-250);
 }
 
-:where([data-component-guide]) [data-badges] {
+:where(.component-guide) .badge-examples {
 	width: fit-content;
 	max-width: 100%;
 }
 
-:where([data-component-guide]) [data-badges]>div {
+:where(.component-guide) .badge-examples>div {
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: column;
@@ -125,7 +125,7 @@ body[data-component-guide] {
 	margin-block-end: var(--space-250);
 }
 
-:where([data-component-guide]) [data-badges]>footer {
+:where(.component-guide) .badge-examples>footer {
 	display: flex;
 	flex-wrap: wrap;
     flex-direction: column;
@@ -133,32 +133,32 @@ body[data-component-guide] {
 	gap: var(--space-200);
 }
 
-:where([data-component-guide]) [data-forms] {
+:where(.component-guide) .form-examples {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	gap: var(--space-250);
 	align-items: start;
 }
 
-:where([data-component-guide]) [data-forms] fieldset {
+:where(.component-guide) .form-examples fieldset {
 	display: grid;
 	gap: var(--space-250);
 }
 
-:where([data-component-guide]) [data-forms] form {
+:where(.component-guide) .form-examples form {
 	flex: 1;
 	min-width: 0;
 	display: grid;
 	gap: var(--space-250);
 }
 
-:where([data-component-guide]) [data-forms] label {
+:where(.component-guide) .form-examples label {
 	display: flex;
 	gap: var(--space-050);
 	align-items: center;
 }
 
-:where([data-component-guide]) [data-title-groups] {
+:where(.component-guide) .title-group-examples {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
 	gap: var(--space-300);

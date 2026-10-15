@@ -15,7 +15,7 @@
 	} else {
 		enableToggle();
 	}
-	const menuSelector = '.sidebar nav > ul > li > a';
+	const menuSelector = '.sidebar .sidebar-link';
 	let flyout;
 	let owner;
 	let hideTimer;
@@ -61,7 +61,7 @@
 		title.textContent = menu.querySelector('span').textContent;
 		flyout.setAttribute('aria-label', title.textContent + ' 하위 메뉴');
 		flyout.replaceChildren(title);
-		const submenu = menu.parentElement.querySelector(':scope > ul');
+		const submenu = menu.parentElement.querySelector(':scope > .sidebar-submenu-list');
 		if (submenu) {
 			const list = submenu.cloneNode(true);
 			list.removeAttribute('id');
@@ -108,7 +108,7 @@
 		}
 		const menu = event.target.closest(menuSelector);
 		if (menu && sidebar.dataset.expanded === 'false') {
-			const first = menu.parentElement.querySelector(':scope > ul a[href]');
+			const first = menu.parentElement.querySelector(':scope > .sidebar-submenu-list a[href]');
 			if (first) menu.href = first.href;
 		}
 		const insideFlyout = flyout?.contains(event.target);

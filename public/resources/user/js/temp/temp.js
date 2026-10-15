@@ -17,10 +17,12 @@
 	const initialize = async () => {
 		await Promise.all([...document.querySelectorAll('[data-include]')].map(load));
 
-		const menu = document.querySelector('.sidebar nav > ul');
+		const menu = document.querySelector('.sidebar-list');
 		if (menu && !menu.querySelector('[data-publishing-components]')) {
 			const item = document.createElement('li');
+			item.className = 'sidebar-item';
 			const link = document.createElement('a');
+			link.className = 'sidebar-link';
 			link.href = '/WEB-INF/html/user/components.html';
 			link.target = '_blank';
 			link.rel = 'noopener noreferrer';

@@ -24,7 +24,7 @@
 
 				<div class="dashboard-grid">
 					<div class="dashboard-main">
-						<section class="card" aria-labelledby="priority-title" data-priority>
+						<section class="card priority-card" aria-labelledby="priority-title">
 							<div class="priority-content">
 								<p class="priority-label">오늘의 우선 학습</p>
 								<div class="priority-heading">
@@ -60,11 +60,11 @@
 							</div>
 						</dl>
 
-						<section class="card dashboard-assessments" aria-labelledby="assessment-title" data-assessments>
+						<section class="card assessments dashboard-assessments" aria-labelledby="assessment-title" data-assessments>
 							<header>
 								<div>
 									<h2 class="title-h3" id="assessment-title">대기중인 평가</h2>
-									<p>전체 <span data-assessment-count>5</span>건</p>
+									<p>전체 <span>5</span>건</p>
 								</div>
 								<div class="content-switcher" role="group" aria-label="평가 상태 필터">
 									<button type="button" data-filter="all" aria-pressed="true">전체</button>
@@ -74,7 +74,7 @@
 								</div>
 							</header>
 							
-							<ul class="dashboard-assessment-list" tabindex="0" aria-label="평가목록">
+							<ul class="dashboard-assessment-list assessment-list" tabindex="0" aria-label="평가목록">
 								
 								<!-- 
 								평가목록 상태
@@ -82,7 +82,7 @@
 								2. data-assessment-state="education" : 교육필요
 								3. data-assessment-state="completed" : 완료
 								-->
-								<li data-assessment-state="available">
+								<li class="assessment-item" data-assessment-state="available">
 									
 									<!-- 
 									평가완료일정
@@ -127,7 +127,7 @@
 									</div>
 								</li>
 								
-								<li data-assessment-state="education">
+								<li class="assessment-item" data-assessment-state="education">
 									<div class="assessment-status is-scheduled">
 										<span>마감예정</span>
 										<strong>D-12</strong>
@@ -145,7 +145,7 @@
 										<button class="btn btn-neutral btn-md" type="button">응시안내</button>
 									</div>
 								</li>
-								<li data-assessment-state="education">
+								<li class="assessment-item" data-assessment-state="education">
 									<div class="assessment-status is-scheduled">
 										<span>마감예정</span>
 										<strong>D-8</strong>
@@ -163,7 +163,7 @@
 										<button class="btn btn-neutral btn-md" type="button">응시안내</button>
 									</div>
 								</li>
-								<li data-assessment-state="completed">
+								<li class="assessment-item" data-assessment-state="completed">
 									<div class="assessment-status">
 										<span>응시완료</span>
 										<strong>D-00</strong>
@@ -180,7 +180,7 @@
 										<button class="btn btn-neutral btn-md" type="button" disabled>오답해설</button>
 									</div>
 								</li>
-								<li data-assessment-state="completed">
+								<li class="assessment-item" data-assessment-state="completed">
 									<div class="assessment-status">
 										<span>응시완료</span>
 										<strong>D-00</strong>
@@ -201,16 +201,16 @@
 							<p class="visually-hidden" role="status" data-filter-status></p>
 						</section>
 
-						<section class="card" aria-labelledby="weak-title" data-weakness>
+						<section class="card" aria-labelledby="weak-title">
 							<h2 class="title-h3" id="weak-title">최근 취약 절차</h2>
-							<ul>
-								<li>
+							<ul class="weakness-list">
+								<li class="weakness-item">
 									<div>
 										<h3 class="title-h4">03. 보일러 예열</h3>
 										<p>오답률 42% · 관련 오답 3문항</p>
 									</div><button class="btn btn-neutral btn-lg" type="button">영상보기</button>
 								</li>
-								<li>
+								<li class="weakness-item">
 									<div>
 										<h3 class="title-h4">07. 계통 병입</h3>
 										<p>오답률 35% · 관련 오답 2문항</p>
@@ -220,8 +220,8 @@
 						</section>
 					</div>
 					<aside class="dashboard-aside" aria-label="평가 안내 및 서비스">
-						<section class="card" aria-labelledby="guide-title" data-guide>
-							<header>
+						<section class="card evaluation-guide" aria-labelledby="guide-title">
+							<header class="guide-header">
 								<div>
 									<p>위피안내</p>
 									<h2 class="title-h2 guide-title" id="guide-title">평가 준비를 시작하세요.</h2>
@@ -233,32 +233,32 @@
 							준비단계별 아이콘
 							1. 강조단계:  aria-current="step"
 							-->
-							<ol>
-								<li aria-current="step">
+							<ol class="guide-list">
+								<li class="guide-item" aria-current="step">
 									<span class="guide-step-number" aria-hidden="true">1</span><strong>교육영상</strong><span class="badge badge-outlined badge-danger">필요</span>
 								</li>
-								<li><span class="guide-step-number" aria-hidden="true">2</span><strong>조작연습</strong><span class="badge badge-outlined badge-warning">대기</span></li>
-								<li><span class="guide-step-number" aria-hidden="true">3</span><strong>평가시작</strong><span class="badge badge-outlined badge-neutral">잠김</span></li>
-								<li><span class="guide-step-number" aria-hidden="true">4</span><strong>오답복습</strong><span class="badge badge-outlined badge-neutral">대기</span></li>
+								<li class="guide-item"><span class="guide-step-number" aria-hidden="true">2</span><strong>조작연습</strong><span class="badge badge-outlined badge-warning">대기</span></li>
+								<li class="guide-item"><span class="guide-step-number" aria-hidden="true">3</span><strong>평가시작</strong><span class="badge badge-outlined badge-neutral">잠김</span></li>
+								<li class="guide-item"><span class="guide-step-number" aria-hidden="true">4</span><strong>오답복습</strong><span class="badge badge-outlined badge-neutral">대기</span></li>
 							</ol>
 						</section>
-						<section class="card" aria-labelledby="notice-title" data-notices>
+						<section class="card notices" aria-labelledby="notice-title">
 							<h2 class="title-h2 dashboard-aside-title" id="notice-title">공지사항</h2>
 							<!-- 공지사항 리스트 : 맥스 5개 -->
-							<ul>
-								<li><a href="../helpdesk/index.html">6월 정기평가 일정 안내</a><time datetime="2026-06-01">2026.06.01</time></li>
-								<li><a href="../helpdesk/index.html">평가 중 타 프로그램 사용 제한 안내</a><time datetime="2026-05-28">2026.05.28</time></li>
-								<li><a href="../helpdesk/index.html">교육영상 시청 이력 반영 안내</a><time datetime="2026-05-21">2026.05.21</time></li>
-								<li><a href="../helpdesk/index.html">제어화면 객체 Tag 업데이트</a><time datetime="2026-05-20">2026.05.20</time></li>
-								<li><a href="../helpdesk/index.html">5월 상시평가 일정 안내</a><time datetime="2026-05-01">2026.05.01</time></li>
+							<ul class="notice-list">
+								<li class="notice-item"><a href="../helpdesk/index.html">6월 정기평가 일정 안내</a><time datetime="2026-06-01">2026.06.01</time></li>
+								<li class="notice-item"><a href="../helpdesk/index.html">평가 중 타 프로그램 사용 제한 안내</a><time datetime="2026-05-28">2026.05.28</time></li>
+								<li class="notice-item"><a href="../helpdesk/index.html">교육영상 시청 이력 반영 안내</a><time datetime="2026-05-21">2026.05.21</time></li>
+								<li class="notice-item"><a href="../helpdesk/index.html">제어화면 객체 Tag 업데이트</a><time datetime="2026-05-20">2026.05.20</time></li>
+								<li class="notice-item"><a href="../helpdesk/index.html">5월 상시평가 일정 안내</a><time datetime="2026-05-01">2026.05.01</time></li>
 							</ul>
 						</section>
 						<nav class="card service-links" aria-labelledby="shortcut-title">
 							<h2 class="title-h2 dashboard-aside-title" id="shortcut-title">서비스 바로가기</h2>
-							<ul>
-								<li><a href="../education/index.html"><span data-icon="book" aria-hidden="true"></span>절차교육</a></li>
-								<li><a href="../helpdesk/index.html"><span data-icon="guidebook" aria-hidden="true"></span>평가방법 안내</a></li>
-								<li><a href="../helpdesk/index.html"><span data-icon="lifesaver" aria-hidden="true"></span>HELP DESK</a></li>
+							<ul class="service-list">
+								<li class="service-item"><a href="../education/index.html"><span data-icon="book" aria-hidden="true"></span>절차교육</a></li>
+								<li class="service-item"><a href="../helpdesk/index.html"><span data-icon="guidebook" aria-hidden="true"></span>평가방법 안내</a></li>
+								<li class="service-item"><a href="../helpdesk/index.html"><span data-icon="lifesaver" aria-hidden="true"></span>HELP DESK</a></li>
 							</ul>
 						</nav>
 					</aside>

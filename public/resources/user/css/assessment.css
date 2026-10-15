@@ -1,23 +1,23 @@
 /* Shared assessment components */
-.dashboard-assessments {
+.assessments {
 	min-width: 0;
 	align-items: stretch;
 	overflow-wrap: anywhere;
 }
 
-.dashboard-assessments header,
-.dashboard-assessments header>div {
+.assessments header,
+.assessments header>div {
 	display: flex;
 	align-items: baseline;
 	flex-wrap: wrap;
 	gap: var(--space-100);
 }
 
-.dashboard-assessments header {
+.assessments header {
 	justify-content: space-between;
 }
 
-.dashboard-assessment-list > li {
+.assessment-item {
 	display: grid;
 	gap: var(--space-200);
 	border-block-end: 1px solid var(--border-neutral-subtler);
@@ -25,8 +25,8 @@
 	margin-block-end: var(--space-100);
 }
 
-.dashboard-assessment-list>li .badge-group,
-.dashboard-assessment-list>li .btn-group {
+.assessment-item .badge-group,
+.assessment-item .btn-group {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -46,11 +46,11 @@
 }
 
 @media (min-width: 768px) {
-	.dashboard-assessment-list>li {
+	.assessment-item {
 		grid-template-columns: 88px minmax(0, 1fr);
 	}
 
-	.dashboard-assessment-list>li .btn-group {
+	.assessment-item .btn-group {
 		grid-column: 2;
 	}
 	
@@ -61,12 +61,12 @@
 }
 
 @media (min-width: 1400px) {
-	.dashboard-assessment-list>li {
+	.assessment-item {
 		grid-template-columns: 88px minmax(0, 1fr) auto;
 		align-items: center;
 	}
 
-	.dashboard-assessment-list>li .btn-group {
+	.assessment-item .btn-group {
 		grid-column: 3;
 		align-self: end;
 	}

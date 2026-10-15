@@ -46,6 +46,30 @@
 	--icon-source: url('/resources/user/images/icons/check.svg');
 }
 
+[data-icon="check-circle"]::before {
+	--icon-source: url('/resources/user/images/icons/check_circle_fill.svg');
+}
+
+[data-icon="cancel"]::before {
+	--icon-source: url('/resources/user/images/icons/cancel.svg');
+}
+
+[data-icon="error"]::before {
+	--icon-source: url('/resources/user/images/icons/error.svg');
+}
+
+[data-icon="target-check"]::before {
+	--icon-source: url('/resources/user/images/icons/target_check.svg');
+}
+
+[data-icon="crown"]::before {
+	--icon-source: url('/resources/user/images/icons/crown.svg');
+}
+
+[data-icon="insert-chart"]::before {
+	--icon-source: url('/resources/user/images/icons/insert_chart.svg');
+}
+
 .icon-search, [data-icon="search"]::before {
 	--icon-source: url('/resources/user/images/icons/search.svg');
 }
@@ -172,10 +196,10 @@ select.form-select[size="1"]:not([multiple]) {
 
 /* 컴포넌트용 아이콘 - 임시사용 */
 .sidebar nav,
-.sidebar nav > ul {
+.sidebar-list {
 	height: 100%;
 }
-.sidebar nav li:last-child {
+.sidebar-item:last-child {
 	flex: 1;
 	min-height: 0;
     display: inline-flex;

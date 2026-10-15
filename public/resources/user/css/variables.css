@@ -193,6 +193,7 @@
 	--bg-primary-emphasis: var(--blue-900);
 	--bg-neutral-subtlest: var(--neutral-100);
 	--bg-neutral-subtler: var(--neutral-200);
+	--bg-neutral-subtle: var(--neutral-300);
 	--bg-neutral-strong: var(--neutral-600);
 	--bg-success-subtlest: var(--green-100);
 	--bg-success-subtler: var(--green-200);

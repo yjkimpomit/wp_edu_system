@@ -6,15 +6,16 @@
 @import url('icons.css');
 
 @import url('components.css');
+@import url('table.css');
 @import url('assessment.css');
 @import url('layout.css');
 @import url('sidebar.css');
 @import url('header.css');
 @import url('dashboard.css');
+@import url('reports.css');
 @import url('component-guide.css');
 
 /* 
-@import url('table.css');
 @import url('ztree.css');
 
 @import url('pages.css');
