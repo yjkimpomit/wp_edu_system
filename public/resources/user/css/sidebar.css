@@ -89,3 +89,10 @@
 .sidebar-flyout > strong { display: block; padding: var(--space-050) var(--space-100); font-weight: var(--fw-bold); }
 .sidebar-flyout a { display: block; padding: var(--space-100); border-radius: var(--radius-xs); color: inherit; }
 .sidebar-flyout a:hover, .sidebar-flyout a:focus-visible { background: var(--bg-primary-subtler); color: var(--fg-primary-strong); }
+
+.sidebar a:focus-visible,
+.sidebar button:focus-visible,
+.sidebar-flyout a:focus-visible {
+	outline: 2px solid var(--border-primary-default);
+	outline-offset: var(--space-025);
+}

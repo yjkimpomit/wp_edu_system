@@ -116,6 +116,30 @@
 		if (sidebar.dataset.expanded === 'true' && !sidebar.contains(event.target) && !insideFlyout) setExpanded(false);
 	});
 	document.addEventListener('keydown', event => {
+		if (event.key === 'Tab' && !event.altKey && !event.ctrlKey && !event.metaKey) {
+			const menu = event.target.closest(menuSelector);
+			if (menu?.closest('.sidebar').dataset.expanded === 'false') {
+				const menus = [...document.querySelectorAll(menuSelector)];
+				const target = event.shiftKey ? menus[menus.indexOf(menu) - 1] : menu;
+				if (target) show(target);
+				const links = target ? [...flyout.querySelectorAll('a[href]')] : [];
+				const destination = event.shiftKey ? links.at(-1) : links[0];
+				if (destination) {
+					event.preventDefault();
+					destination.focus();
+				} else {
+					hide();
+				}
+			} else if (flyout && !flyout.hidden && flyout.contains(event.target)) {
+				const links = [...flyout.querySelectorAll('a[href]')];
+				if ((event.shiftKey && event.target === links[0]) || (!event.shiftKey && event.target === links.at(-1))) {
+					const previous = owner;
+					if (event.shiftKey) event.preventDefault();
+					previous?.focus();
+					hide();
+				}
+			}
+		}
 		if (event.key === 'ArrowRight' && event.target.matches(menuSelector) && event.target.closest('.sidebar').dataset.expanded === 'false') {
 			show(event.target);
 			const first = flyout?.querySelector('a');
