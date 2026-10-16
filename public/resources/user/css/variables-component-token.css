@@ -43,4 +43,10 @@
 	/* pagination */
 	--pagination-input-width: 40px;
 
+	/* flex-layout */
+	--flex-layout-gap: var(--space-300);
+
+	/* dashboard */
+	--dashboard-aside: 360px;
+
 }

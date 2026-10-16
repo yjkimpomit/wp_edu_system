@@ -17,8 +17,19 @@
 	justify-content: space-between;
 }
 
+.assessments header > .content-switcher {
+	flex-wrap: nowrap;
+}
+
+.assessment-list {
+	display: grid;
+	grid-template-columns: minmax(max-content, 1fr);
+}
+
 .assessment-item {
 	display: grid;
+	grid-template-columns: 88px minmax(max-content, 1fr) auto;
+	align-items: center;
 	gap: var(--space-200);
 	border-block-end: 1px solid var(--border-neutral-subtler);
 	padding-block: var(--space-150) var(--space-250);
@@ -28,48 +39,26 @@
 .assessment-item .badge-group,
 .assessment-item .btn-group {
 	display: flex;
-	flex-wrap: wrap;
 	align-items: center;
 	gap: var(--space-100);
+}
+
+.assessment-item .btn-group {
+	flex-wrap: nowrap;
 }
 
 .assessment-status {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	min-height: 92px;
+	flex-direction: column;
 	gap: var(--space-050) var(--space-200);
 	padding: var(--space-150);
 	border-radius: var(--radius-sm);
 	background: var(--bg-neutral-subtler);
 	font-size: var(--fs-sm);
 	font-weight: var(--fw-bold);
-}
-
-@media (min-width: 768px) {
-	.assessment-item {
-		grid-template-columns: 88px minmax(0, 1fr);
-	}
-
-	.assessment-item .btn-group {
-		grid-column: 2;
-	}
-	
-	.assessment-status {
-		min-height: 92px;
-		flex-direction: column;
-	}
-}
-
-@media (min-width: 1400px) {
-	.assessment-item {
-		grid-template-columns: 88px minmax(0, 1fr) auto;
-		align-items: center;
-	}
-
-	.assessment-item .btn-group {
-		grid-column: 3;
-		align-self: end;
-	}
 }
 
 .assessment-status.is-due {

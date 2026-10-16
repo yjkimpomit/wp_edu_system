@@ -22,10 +22,12 @@
 	--fw-regular: 400;
 	--fw-medium: 600;
 	--fw-bold: 700;
-		/* semantic/icon-size */
+
+	/* semantic/icon-size */
 	--icon-size-sm: 16px;
 	--icon-size-md: 20px;
 	--icon-size-lg: 24px;
+
 	/* size/space */
 	--space-100: 8px;
 	--space-150: 12px;

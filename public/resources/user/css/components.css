@@ -28,15 +28,24 @@
 	padding-inline: var(--space-050);
 }
 
-/* Reusable three-column layout */
-.grid-3 {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr);
-	gap: var(--space-300);
+/* Reusable flex layout */
+.flex-layout {
+	display: flex;
+	flex-direction: column;
+	gap: var(--flex-layout-gap);
+}
+
+.flex-layout-item {
+	min-width: 0;
 }
 
 @media (min-width: 1600px) {
-	.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.flex-layout { flex-direction: row; }
+	.flex-layout-item { flex: 1 1 0; }
+	.flex-layout-item-grow-2 { flex-grow: 2; }
+	.flex-layout > .flex-layout-item > .title-group {
+		min-height: var(--height-36);
+	}
 }
 
 .empty-state {
@@ -349,13 +358,19 @@
 
 /* Badge */
 .badge {
-	min-height: var(--height-28);
-	min-width: var(--badge-min-width);
-	padding-inline: var(--space-050);
-	color: var(--fg-primary-strong);
+	height: var(--height-28);
 	font-size: var(--fs-sm);
+	min-width: var(--badge-min-width);
+	padding-inline: var(--space-100);
+	
+	color: var(--fg-primary-strong);
 	border: 1px solid transparent;
-	border-radius: var(--radius-sm);
+	border-radius: var(--radius-xs);
+}
+
+@media (min-width: 768px) {
+	.badge {
+	}
 }
 
 .badge-lg {
@@ -437,7 +452,6 @@
 .badge-solid {
 	color: var(--fg-white);
 	background: var(--bg-primary-strong);
-	padding-inline: var(--space-100);
 }
 
 .badge-solid.badge-neutral {
@@ -789,7 +803,10 @@ select.form-select[size="1"]:not([multiple]) {
 .content-switcher {
 	display: inline-flex;
 	align-items: center;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	min-width: 0;
+	max-width: 100%;
+	overflow-x: auto;
 	gap: var(--space-100);
 	padding: var(--space-025);
 	border: 1px solid var(--border-neutral-subtler);
@@ -798,9 +815,15 @@ select.form-select[size="1"]:not([multiple]) {
 }
 
 .content-switcher > button {
+	flex-shrink: 0;
+	white-space: nowrap;
 	padding: var(--space-050) var(--space-200);
 	border-radius: var(--radius-sm);
 	font-size: var(--fs-sm);
+}
+
+.title-group > .content-switcher {
+	flex-wrap: nowrap;
 }
 
 .content-switcher > button[aria-pressed="true"] {

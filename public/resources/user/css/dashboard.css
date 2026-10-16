@@ -60,8 +60,10 @@
 
 .assessment-summary {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr);
+	grid-template-columns: repeat(5, minmax(max-content, 1fr));
 	gap: var(--space-200);
+	min-width: 0;
+	overflow-x: auto;
 }
 
 .summary-item {
@@ -115,20 +117,31 @@
 }
 
 .weakness-list {
-	display: grid;
-	gap: var(--space-200);
+	--flex-layout-gap: var(--space-200);
+	flex-wrap: wrap;
 }
 
 .weakness-item {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
-	gap: var(--space-150);
+	flex: 0 0 calc( 50% - (var(--flex-layout-gap) * 0.5) );
+	
 	padding: var(--space-200) var(--space-300);
 	background: var(--bg-neutral-subtlest);
 	border: 1px solid var(--border-neutral-subtler);
 	border-radius: var(--radius-md);
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--space-200);
+}
+
+@media (min-width: 768px) {
+	.weakness-item {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
 }
 
 .guide-header {
@@ -213,17 +226,27 @@
 .notice-list {
 	display: grid;
 	gap: var(--space-050);
+	width: 100%;
+	min-width: 0;
 }
 
 .notice-item {
 	display: flex;
-	flex-wrap: wrap;
+	min-width: 0;
 	justify-content: space-between;
 	gap: var(--space-050) var(--space-150);
 	font-size: var(--fs-sm);
 }
 
+.notice-link {
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .notice-item time {
+	flex-shrink: 0;
 	white-space: nowrap;
 }
 
@@ -259,19 +282,13 @@
 	text-decoration: underline;
 }
 
-@media (min-width: 600px) {
-	.assessment-summary {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
 	.dashboard-content {
 		display: grid;
 	}
 
 	.dashboard-grid {
-		grid-template-columns: minmax(0, 3.87fr) minmax(300px, 1fr);
+		grid-template-columns: minmax(0, 1fr) minmax(240px, 360px);
 		align-items: stretch;
 	}
 
@@ -279,28 +296,16 @@
 		grid-template-rows: auto auto minmax(0, 1fr) auto;
 	}
 
+	.dashboard-aside {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+
 	.dashboard-assessments {
 		display: grid;
 		grid-template-rows: auto minmax(0, 1fr);
 		min-height: 0;
 	}
-
-	.dashboard-assessment-list {
-		min-height: 0;
-		max-block-size: none;
-		contain: size;
-	}
-
-	.assessment-summary {
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-	}
-
-	.weakness-list {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-}
-
-@media (min-width: 1600px) {
+	
 	.priority-card {
 		flex-direction: row;
 		justify-content: space-between;
