@@ -1,4 +1,46 @@
-/* Component Tokens */
 :root {
-	
+	/* COMPONENT */
+
+	--focus-ring-width: 2px;
+	--focus-ring: var(--opacity-blue-90);
+	--focus-ring-offset: 2px;
+
+	/* component/gradient */
+	--chart-01: linear-gradient(180deg, var(--data-viz-01-soft), var(--data-viz-01-default));
+	--chart-02: linear-gradient(180deg, var(--data-viz-02-soft), var(--data-viz-02-default));
+	--chart-03: linear-gradient(180deg, var(--data-viz-03-soft), var(--data-viz-03-default));
+	--chart-04: linear-gradient(180deg, var(--data-viz-04-soft), var(--data-viz-04-default));
+	--chart-05: linear-gradient(180deg, var(--data-viz-05-soft), var(--data-viz-05-default));
+	--chart-06: linear-gradient(180deg, var(--data-viz-06-soft), var(--data-viz-06-default));
+	--chart-07: linear-gradient(180deg, var(--data-viz-07-soft), var(--data-viz-07-default));
+	--chart-08: linear-gradient(180deg, var(--data-viz-08-soft), var(--data-viz-08-default));
+	--chart-09: linear-gradient(180deg, var(--data-viz-09-soft), var(--data-viz-09-default));
+	--chart-10: linear-gradient(180deg, var(--data-viz-10-soft), var(--data-viz-10-default));
+
+	--chart-light: linear-gradient(180deg, var(--neutral-200), var(--neutral-300));
+	--chart-dark: linear-gradient(180deg, var(--neutral-700), var(--neutral-800));
+
+	/* component/gradient */
+	--bg-dual-gradient: var(--gradient-radial-navy), var(--gradient-linear-navy);
+
+	/* component/box-shadow */
+	--box-shadow-1: 0 0 2px 1px var(--opacity-dark-16);
+	--box-shadow-2: 0 0 16px 4px var(--opacity-dark-32);
+	--box-shadow-3: 0 0 8px 2px var(--opacity-dark-16); /* sidebar expanded */
+
+	/* component/scrollbar */
+	--scrollbar-handle: var(--border-neutral-subtle);
+	--scrollbar-bg: var(--bg-neutral-subtler);
+	--scrollbar-border: var(--border-neutral-subtler);
+	--scrollbar-size: var(--space-100);
+	--scrollbar-track-inset: var(--space-025);
+
+	/* component/form */
+	--date-range-width: 320px;
+	--form-max-width: 480px;
+	--textarea-height: 80px;
+
+	/* pagination */
+	--pagination-input-width: 40px;
+
 }

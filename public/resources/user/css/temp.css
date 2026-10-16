@@ -1,0 +1,29 @@
+
+/* 컴포넌트용 아이콘 - 임시사용 */
+.sidebar nav,
+.sidebar-list {
+	height: 100%;
+}
+.sidebar-item:last-child {
+	flex: 1;
+	min-height: 0;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+[data-icon="widgets"]::before {
+	--icon-source: url('/resources/user/images/icons/widgets.svg');
+}
+
+[data-icon="widgets"] {
+	--icon-color: var(--data-viz-08-soft);
+	border-color: var(--border-neutral-subtler) !important;
+	background-color: var(--bg-neutral-subtler) !important;
+}
+
+[data-icon="widgets"]:hover {
+	color: var(--fg-white) !important;
+	--icon-color: var(--fg-white);
+	border-color: var(--data-viz-08-default) !important;
+	background-color: var(--data-viz-08-default) !important;
+}

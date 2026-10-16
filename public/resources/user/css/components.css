@@ -589,7 +589,6 @@ input[type="checkbox"] {
 
 input.form-control,
 select.form-select {
-	box-sizing: border-box;
 	height: var(--height-32);
 }
 

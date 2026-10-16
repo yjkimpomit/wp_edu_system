@@ -186,13 +186,14 @@ a {
 	color: inherit;
 }
 
-a:focus {
+:focus {
 	outline: none;
 }
 
-a:focus-visible {
+:focus-visible {
 	outline: var(--focus-ring-width) solid var(--focus-ring);
 	outline-offset: var(--focus-ring-offset);
+	border-radius: var(--space-100);
 }
 
 button {
@@ -203,11 +204,6 @@ button {
 	cursor: pointer;
 	font-family: var(--font-family-base), sans-serif;
 	font-size: inherit;
-}
-
-button:focus-visible {
-	outline: var(--focus-ring-width) solid var(--focus-ring);
-	outline-offset: var(--focus-ring-offset);
 }
 
 .d-none,

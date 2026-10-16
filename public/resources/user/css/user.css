@@ -13,7 +13,9 @@
 @import url('header.css');
 @import url('dashboard.css');
 @import url('reports.css');
+
 @import url('component-guide.css');
+@import url('temp.css');
 
 /* 
 @import url('ztree.css');

@@ -16,7 +16,7 @@ body.component-guide {
 
 :where(.component-guide) main>section {
 	margin-block-end: var(--space-400);
-	border-block-start: calc(var(--space-025) / 2) solid var(--border-accent-purple-subtler);
+	border-block-start: 1px solid var(--border-accent-purple-subtler);
 	padding-block-start: var(--space-200);
 }
 
@@ -55,7 +55,7 @@ body.component-guide {
 }
 
 :where(.component-guide) .btn-secondary.is-preview-hover {
-	background: var(--bg-secondary-default);
+	background: var(--bg-primary-subtle);
 }
 
 :where(.component-guide) .btn-secondary-ondark.is-preview-hover {
