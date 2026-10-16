@@ -143,8 +143,7 @@
 	width: 80px;
 	height: 80px;
 	padding: var(--space-100);
-	background: var(--bg-primary-subtlest) url('/resources/user/images/weepy/weepy01.svg') no-repeat center;
-	background-size: 76px;
+	background: url('/resources/user/images/weepy/weepy_04.png') no-repeat center;
 	border: 1px solid var(--border-primary-subtlest);
 	border-radius: var(--radius-md);
 	overflow: hidden;
