@@ -302,7 +302,7 @@
 
 	.dashboard-assessments {
 		display: grid;
-		grid-template-rows: auto minmax(0, 1fr);
+		grid-template-rows: auto minmax(0, 424px);
 		min-height: 0;
 	}
 	

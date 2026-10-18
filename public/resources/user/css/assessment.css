@@ -24,6 +24,7 @@
 .assessment-list {
 	display: grid;
 	grid-template-columns: minmax(max-content, 1fr);
+    align-content: start;
 }
 
 .assessment-item {
