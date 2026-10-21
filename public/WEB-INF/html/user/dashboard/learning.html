@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>학습평가 대시보드 | 기동정지절차교육평가시스템</title>
+		<link rel="stylesheet" href="/resources/user/css/user.css">
+		<script src="/resources/user/js/sidebar/sidebar.js" defer></script>
+		<script src="/resources/user/js/learning/learning-flow.js" defer></script>
+		<script src="/resources/user/js/temp/temp.js" defer></script>
+	</head>
+	<body>
+		<a class="skip-link visually-hidden-focusable" href="#flow-content">본문 바로가기</a>
+		<div class="app-shell">
+			<div data-include="../sidebar.html"></div>
+			<div>
+				<div data-include="../header.html"></div>
+				<main class="learning-flow" id="flow-content" tabindex="-1" data-learning-page="dashboard">
+					<header class="flow-heading">
+						<div>
+							<h1 class="title-h1">학습평가 대시보드</h1>
+							<p class="flow-note">평택 · 교육과 평가를 이어서, 모든 문항을 통과할 때까지</p>
+						</div>
+						<span class="badge badge-light">예시 계정 · 평택</span>
+					</header>
+					<nav class="flow-nav" aria-label="학습평가 화면">
+						<a class="flow-nav-link" href="../dashboard/learning.html" aria-current="page">대시보드</a>
+						<a class="flow-nav-link" href="../education/index.html">절차교육</a>
+						<a class="flow-nav-link" href="../assessment/index.html">평가</a>
+						<a class="flow-nav-link" href="../reports/learning.html">결과/리포트</a>
+					</nav>
+					<p class="feedback-note feedback-note-info">퍼블리싱 시안입니다. 교육·문항·운전화면은 예시이며 진행 상황은 현재 브라우저에 저장됩니다.</p>
+					<noscript>
+						<p class="empty-state">학습평가 콘텐츠를 확인하려면 JavaScript를 활성화해 주세요.</p>
+					</noscript>
+					<section class="card priority-card flow-card" aria-labelledby="priority-title" id="flow-priority"></section>
+					<dl class="flow-summary" aria-label="평가 요약" id="flow-summary"></dl>
+					<div class="flow-columns flow-dashboard-columns">
+						<div class="flow-stack">
+							<section class="card flow-card" aria-labelledby="course-title">
+								<div class="flow-toolbar">
+									<h2 class="title-h3" id="course-title">나의 학습평가</h2>
+									<label>
+										평가 구분
+										<select class="form-select" id="kind-filter">
+											<option value="all">전체</option>
+											<option value="regular">정기평가</option>
+											<option value="ongoing">상시평가</option>
+										</select>
+									</label>
+								</div>
+								<div class="content-switcher" role="group" aria-label="평가 상태 필터" id="state-filter">
+									<button type="button" aria-pressed="true" data-state="all">전체</button>
+									<button type="button" aria-pressed="false" data-state="education">교육 필요</button>
+									<button type="button" aria-pressed="false" data-state="retest">응시 가능</button>
+									<button type="button" aria-pressed="false" data-state="completed">완료</button>
+								</div>
+								<ul class="flow-course-list" id="course-list"></ul>
+								<p class="flow-note" role="status" id="filter-status"></p>
+							</section>
+							<section class="card flow-card" aria-labelledby="weak-title">
+								<h2 class="title-h3" id="weak-title">보완이 필요한 절차</h2>
+								<p class="flow-note">진행 중인 평가의 미통과 문항만 표시합니다.</p>
+								<ul class="flow-guide-list" id="weak-list"></ul>
+							</section>
+						</div>
+						<aside class="flow-stack" aria-label="평가 규정 및 복습">
+							<section class="card flow-card">
+								<h2 class="title-h3">평가 규정</h2>
+								<ol class="flow-guide-list">
+									<li class="flow-guide-item">
+										정기평가: 연 2회
+										<br>
+										상시평가: 별도 운영
+									</li>
+									<li class="flow-guide-item">해당 평가의 모든 교육 완료 후 최초 평가 20문항에 응시합니다.</li>
+									<li class="flow-guide-item">오답 관련 교육과 미통과 문항 재시험을 반복합니다.</li>
+									<li class="flow-guide-item">최초 20문항을 모두 통과하면 합격합니다.</li>
+								</ol>
+								<details class="flow-details">
+									<summary class="flow-details-title">출제 방식</summary>
+									<p class="flow-detail-copy flow-note">누적 오답률이 높은 문항은 새로운 최초 평가에 선정될 확률이 높아집니다. 재시험에서는 최초 선정 문항 중 미통과 문항만 출제합니다.</p>
+								</details>
+							</section>
+							<section class="card flow-card">
+								<h2 class="title-h3">통과 후 복습 권장</h2>
+								<div id="review-content"></div>
+							</section>
+						</aside>
+					</div>
+					<p class="flow-note" role="status" id="flow-status"></p>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+/* 학습평가 시안 공통. 기존 대시보드와 리포트에는 적용하지 않는다. */
+.learning-flow { display: grid; align-content: start; gap: var(--space-300); }
+.learning-flow .flow-heading,
+.learning-flow .flow-toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-150); }
+.learning-flow .flow-nav { display: flex; flex-wrap: wrap; gap: var(--space-100); }
+.learning-flow .flow-nav-link { padding: var(--space-100) var(--space-150); border-radius: var(--radius-sm); font-size: var(--fs-sm); }
+.learning-flow .flow-nav-link[aria-current="page"] { background: var(--bg-primary-subtler); color: var(--fg-primary-strong); font-weight: var(--fw-bold); }
+.learning-flow .flow-note { color: var(--fg-neutral-stronger); font-size: var(--fs-sm); }
+.learning-flow .flow-stack { display: grid; gap: var(--space-150); min-width: 0; }
+.learning-flow .flow-card { align-items: stretch; min-width: 0; gap: var(--space-200); }
+.learning-flow .flow-summary { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-150); }
+.learning-flow .flow-stat { padding: var(--space-200); border: 1px solid var(--border-neutral-subtler); border-radius: var(--radius-md); background: var(--bg-neutral-subtlest); }
+.learning-flow .flow-stat-value { font-size: var(--fs-xl); font-weight: var(--fw-bold); }
+.learning-flow .flow-stat-details { margin-block-start: var(--space-150); overflow-wrap: anywhere; }
+.learning-flow .flow-stat-list { display: grid; gap: var(--space-150); }
+.learning-flow .flow-columns { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-200); align-items: start; }
+.learning-flow .flow-course-list,
+.learning-flow .flow-procedure-list,
+.learning-flow .flow-step-list,
+.learning-flow .flow-answer-list,
+.learning-flow .flow-guide-list { display: grid; gap: var(--space-100); }
+.learning-flow .flow-course-item { display: grid; gap: var(--space-150); padding-block-end: var(--space-200); border-block-end: 1px solid var(--border-neutral-subtler); }
+.learning-flow .flow-progress { width: 100%; height: var(--height-24); accent-color: var(--bg-primary-strong); }
+.learning-flow .flow-progress-copy { display: flex; justify-content: space-between; gap: var(--space-100); font-size: var(--fs-sm); }
+.learning-flow .flow-select-button { width: 100%; display: flex; justify-content: space-between; text-align: start; gap: var(--space-100); padding: var(--space-150); border: 1px solid var(--border-neutral-subtler); border-radius: var(--radius-sm); font-size: var(--fs-sm); }
+.learning-flow .flow-select-button[aria-pressed="true"] { border-color: var(--border-primary-strong); background: var(--bg-primary-subtler); color: var(--fg-primary-strong); }
+.learning-flow .flow-step-button { width: 100%; text-align: start; padding: var(--space-200); border: 1px solid var(--border-neutral-subtler); border-radius: var(--radius-md); }
+.learning-flow .flow-step-button[aria-pressed="true"] { background: var(--bg-primary-subtlest); border-color: var(--border-primary-strong); }
+.learning-flow .flow-viewer { display: grid; gap: var(--space-200); padding: var(--space-200); background: var(--bg-neutral-subtlest); border: 1px solid var(--border-neutral-subtle); border-radius: var(--radius-md); }
+.learning-flow .flow-equipment-list { display: grid; gap: var(--space-200); }
+.learning-flow .flow-equipment-item { display: grid; gap: var(--space-050); padding: var(--space-200); text-align: start; border: 1px solid var(--border-primary-subtle); border-radius: var(--radius-md); background: var(--bg-white); }
+.learning-flow .flow-equipment-item[aria-current="true"] { border-color: var(--border-primary-strong); background: var(--bg-primary-subtler); }
+.learning-flow .flow-equipment-button { width: 100%; justify-content: flex-start; }
+.learning-flow .flow-answer-zone { min-height: 240px; padding: var(--space-150); border: 1px dashed var(--border-primary-strong); border-radius: var(--radius-md); background: var(--bg-primary-subtlest); }
+.learning-flow .flow-answer-item { display: grid; gap: var(--space-100); padding: var(--space-150); border: 1px solid var(--border-neutral-subtle); border-radius: var(--radius-sm); background: var(--bg-white); }
+.learning-flow .flow-answer-actions { display: flex; flex-wrap: wrap; gap: var(--space-050); }
+.learning-flow .flow-question-list { display: flex; flex-wrap: wrap; gap: var(--space-050); }
+.learning-flow .flow-question-button { min-width: var(--height-36); min-height: var(--height-36); border: 1px solid var(--border-neutral-subtle); border-radius: var(--radius-sm); font-size: var(--fs-sm); }
+.learning-flow .flow-question-button[aria-current="step"] { color: var(--fg-white); background: var(--bg-primary-strong); border-color: var(--border-primary-strong); }
+.learning-flow .flow-guide-item { padding: var(--space-150); background: var(--bg-neutral-subtlest); border-radius: var(--radius-sm); font-size: var(--fs-sm); }
+.learning-flow .flow-table-scroll { width: 100%; }
+.learning-flow .flow-table { min-width: 560px; font-size: var(--fs-sm); }
+.learning-flow .flow-footer { flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; }
+.learning-flow .flow-time { display: flex; flex-wrap: wrap; gap: var(--space-200); font-size: var(--fs-sm); }
+.learning-flow .flow-dialog { width: min(100% - var(--space-400), 560px); margin: auto; padding: var(--space-300); color: var(--fg-neutral-strong); background: var(--bg-white); border: 1px solid var(--border-neutral-subtle); border-radius: var(--radius-lg); }
+.learning-flow .flow-dialog::backdrop { background: var(--opacity-dark-32); }
+.learning-flow .flow-success { color: var(--fg-success-strong); }
+.learning-flow .flow-danger { color: var(--fg-danger-strong); }
+.learning-flow .flow-details { padding-block: var(--space-150); border-block-start: 1px solid var(--border-neutral-subtler); }
+.learning-flow .flow-details-title { cursor: pointer; font-weight: var(--fw-bold); }
+.learning-flow .flow-detail-copy { margin-block-start: var(--space-100); }
+@media (min-width: 768px) {
+	.learning-flow .flow-summary { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+	.learning-flow .flow-course-item { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+	.learning-flow .flow-equipment-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1200px) {
+	.learning-flow .flow-columns { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr); }
+	.learning-flow .flow-dashboard-columns { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
+	.learning-flow .flow-education-columns { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 2fr); }
+	.learning-flow .flow-procedure-list { max-height: 640px; overflow-y: auto; }
+	.learning-flow .flow-equipment-list { grid-template-columns: minmax(0, 1fr); }
+}

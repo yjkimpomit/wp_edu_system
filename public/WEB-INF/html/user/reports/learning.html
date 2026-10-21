@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>학습평가 결과/리포트 | 기동정지절차교육평가시스템</title>
+		<link rel="stylesheet" href="/resources/user/css/user.css">
+		<script src="/resources/user/js/sidebar/sidebar.js" defer></script>
+		<script src="/resources/user/js/learning/learning-flow.js" defer></script>
+		<script src="/resources/user/js/temp/temp.js" defer></script>
+	</head>
+	<body>
+		<a class="skip-link visually-hidden-focusable" href="#flow-content">본문 바로가기</a>
+		<div class="app-shell">
+			<div data-include="../sidebar.html"></div>
+			<div>
+				<div data-include="../header.html"></div>
+				<main class="learning-flow" id="flow-content" tabindex="-1" data-learning-page="reports">
+					<header class="flow-heading">
+						<div>
+							<h1 class="title-h1">학습평가 결과/리포트</h1>
+							<p class="flow-note">평택 · 교육과 평가를 이어서, 모든 문항을 통과할 때까지</p>
+						</div>
+						<span class="badge badge-light">예시 계정 · 평택</span>
+					</header>
+					<nav class="flow-nav" aria-label="학습평가 화면">
+						<a class="flow-nav-link" href="../dashboard/learning.html">대시보드</a>
+						<a class="flow-nav-link" href="../education/index.html">절차교육</a>
+						<a class="flow-nav-link" href="../assessment/index.html">평가</a>
+						<a class="flow-nav-link" href="../reports/learning.html" aria-current="page">결과/리포트</a>
+					</nav>
+					<p class="feedback-note feedback-note-info">퍼블리싱 시안입니다. 교육·문항·운전화면은 예시이며 진행 상황은 현재 브라우저에 저장됩니다.</p>
+					<noscript>
+						<p class="empty-state">학습평가 콘텐츠를 확인하려면 JavaScript를 활성화해 주세요.</p>
+					</noscript>
+					<section class="card flow-card">
+						<div class="flow-toolbar">
+							<h2 class="title-h3">평가 결과</h2>
+							<label for="course-select">
+								평가 선택
+								<select class="form-select" id="course-select"></select>
+							</label>
+						</div>
+						<div id="report-overview" class="flow-stack"></div>
+					</section>
+					<dl class="flow-summary" id="report-summary" aria-label="선택한 평가 결과 요약"></dl>
+					<section class="card flow-card">
+						<h2 class="title-h3">회차별 통과 이력</h2>
+						<p class="flow-note">최초 평가와 재시험을 구분해 누적 통과 수를 표시합니다.</p>
+						<div class="table-scroll flow-table-scroll" role="region" aria-label="응시 이력 표" tabindex="0">
+							<table class="table flow-table">
+								<caption class="visually-hidden">응시 회차, 응시일, 응시 문항, 통과 문항, 오답 문항, 누적 통과</caption>
+								<thead>
+									<tr>
+										<th scope="col">회차</th>
+										<th scope="col">응시일</th>
+										<th scope="col">응시</th>
+										<th scope="col">추가 통과</th>
+										<th scope="col">오답</th>
+										<th scope="col">누적 통과</th>
+									</tr>
+								</thead>
+								<tbody id="history-body"></tbody>
+							</table>
+						</div>
+					</section>
+					<section class="card flow-card">
+						<h2 class="title-h3">문항별 결과 및 보완 학습</h2>
+						<p class="flow-note">오답 횟수는 해당 평가의 최초 응시와 재시험을 합산합니다. 문항 오답률은 최초 응시와 재시험을 구분합니다.</p>
+						<ul class="flow-guide-list" id="result-list"></ul>
+					</section>
+					<p class="flow-note" role="status" id="flow-status"></p>
+				</main>
+			</div>
+		</div>
+	</body>
+</html>

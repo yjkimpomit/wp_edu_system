@@ -4,15 +4,17 @@
 	flex-wrap: wrap;
 	align-items: center;
 	gap: var(--space-300);
-	padding: var(--space-300);
+	padding: var(--space-200);
 	margin-block-end: var(--space-300);
 	border-radius: var(--radius-lg);
 	background: var(--bg-primary-strongest);
 	color: var(--fg-white);
 }
 
-.reports-summary .badge {
-	flex-shrink: 0;
+@media (min-width: 576px) {
+	.reports-summary { 
+		padding: var(--space-300);
+	}
 }
 
 .reports-summary .title-h2 {
@@ -41,6 +43,7 @@
 	display: flex;
 	align-items: center;
 	gap: var(--space-100);
+	white-space: nowrap;
 }
 
 .reports-person-details dt {
@@ -48,9 +51,8 @@
 }
 
 .reports-metrics {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 	gap: var(--space-200) var(--space-300);
 	width: 100%;
 }
@@ -59,9 +61,18 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	flex: 1 1 auto;
 	gap: var(--space-025);
 	padding-inline-start: var(--space-700);
+}
+
+@media (min-width: 768px) {
+	.reports-metrics {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.reports-metric {
+		flex: 1 0 auto;
+	}
 }
 
 .reports-metric::before {

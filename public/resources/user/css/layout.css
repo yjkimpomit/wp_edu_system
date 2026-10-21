@@ -19,7 +19,7 @@
 .app-shell main {
 	flex: 1 1 auto;
 	min-width: 0;
-	padding: var(--space-200);
+	padding: var(--space-100);
 }
 
 @media (min-width: 992px) {

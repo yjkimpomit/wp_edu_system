@@ -58,6 +58,16 @@
 	font-size: var(--fs-sm);
 }
 
+.priority-card .btn-xl {
+	flex: 1;
+}
+
+@media (min-width: 576px) {
+	.priority-card .btn-xl {
+		flex: 0 0 auto;
+	}
+}
+
 .assessment-summary {
 	display: grid;
 	grid-template-columns: repeat(5, minmax(max-content, 1fr));
